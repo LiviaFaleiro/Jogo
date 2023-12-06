@@ -21,7 +21,7 @@ monogatari.action ('notification').notifications ({
 	}
 });
 
-// Define the Particles JS Configurations used in the game
+// Define the Particles JS Configurations used in the game aa
 monogatari.action ('particles').particles ({
 
 });
