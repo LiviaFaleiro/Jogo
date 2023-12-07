@@ -1,146 +1,67 @@
-/* global monogatari */
+const Personagem = function(){
+	this.nome = "Nome padrão"
+	this.vida =  0 ;
+	this.alegria = 0 ;
+	this.disposicao  = 0
+	this.imagem = "assets/p1.png"
 
-// Define the messages used in the game.
-monogatari.action ('message').messages ({
-	'Help': {
-		title: 'Help',
-		subtitle: 'Some useful Links',
-		body: `
-			<p><a href='https://developers.monogatari.io/documentation/'>Documentation</a> - Everything you need to know.</p>
-			<p><a href='https://monogatari.io/demo/'>Demo</a> - A simple Demo.</p>
-		`
-	}
-});
+	
+}
+let amelia = new Personagem();
+amelia.nome = "Amélia"
+amelia.alegria = 6
+amelia.vida = 7
+amelia.disposicao = 4
+amelia.imagem = 'assets/margarida.png'
 
-// Define the notifications used in the game
-monogatari.action ('notification').notifications ({
-	'Welcome': {
-		title: 'Welcome',
-		body: 'This is the Monogatari VN Engine',
-		icon: ''
-	}
-});
+let luana = new Personagem();
 
-// Define the Particles JS Configurations used in the game
-monogatari.action ('particles').particles ({
-
-});
-
-// Define the canvas objects used in the game
-monogatari.action ('canvas').objects ({
-
-});
-
-// Credits of the people involved in the creation of this awesome game
-monogatari.configuration ('credits', {
-
-});
+luana.nome = "Luana"
+luana.alegria = 5
+luana.vida = 8
+luana.disposicao = 9
+luana.imagem = 'assets/marina.png'
 
 
-// Define the images that will be available on your game's image gallery
-monogatari.assets ('gallery', {
 
-});
+let helena = new Personagem();
 
-// Define the music used in the game.
-monogatari.assets ('music', {
+helena.nome = "Helena"
+helena.alegria = 7
+helena.vida = 9
+helena.disposicao = 8
+helena.imagem = 'assetS/helena.png'
 
-});
+let morgana = new Personagem();
 
-// Define the voice files used in the game.
-monogatari.assets ('voices', {
-
-});
-
-// Define the sounds used in the game.
-monogatari.assets ('sounds', {
-
-});
-
-// Define the videos used in the game.
-monogatari.assets ('videos', {
-
-});
-
-// Define the images used in the game.
-monogatari.assets ('images', {
-
-});
-
-// Define the backgrounds for each scene.
-monogatari.assets ('scenes', {
-
-});
+morgana.nome = "Morgana"
+morgana.alegria = 4
+morgana.vida = 10
+morgana.disposicao = 2
+morgana.imagem = 'assets/lucia.png'
 
 
-// Define the Characters
-monogatari.characters ({
-	'y': {
-		name: 'Yui',
-		color: '#5bcaff'
-	}
-});
+function mostrar(Personagem){
+	document.getElementById("foto").src = Personagem.imagem;
+	document.getElementById("nome").innerHTML = Personagem.nome;
+	document.getElementById("alegria").innerHTML = Personagem.alegria;
+	document.getElementById("vida").innerHTML = Personagem.vida;
+	document.getElementById("disposicao").innerHTML = Personagem.disposicao;
 
-monogatari.script ({
-	// The game starts here.
-	'Start': [
-		'show scene #f7f6f6 with fadeIn',
-		'show notification Welcome',
-		{
-			'Input': {
-				'Text': 'What is your name?',
-				'Validation': function (input) {
-					return input.trim ().length > 0;
-				},
-				'Save': function (input) {
-					this.storage ({
-						player: {
-							name: input
-						}
-					});
-					return true;
-				},
-				'Revert': function () {
-					this.storage ({
-						player: {
-							name: ''
-						}
-					});
-				},
-				'Warning': 'You must enter a name!'
-			}
-		},
-		'y Hi {{player.name}} Welcome to Monogatari!',
-		{
-			'Choice': {
-				'Dialog': 'y Have you already read some documentation?',
-				'Yes': {
-					'Text': 'Yes',
-					'Do': 'jump Yes'
-				},
-				'No': {
-					'Text': 'No',
-					'Do': 'jump No'
-				}
-			}
-		}
-	],
 
-	'Yes': [
-		'y Thats awesome!',
-		'y Then you are ready to go ahead and create an amazing Game!',
-		'y I can’t wait to see what story you’ll tell!',
-		'end'
-	],
 
-	'No': [
+}
 
-		'y You can do it now.',
+function iniciarOJogo(personagem){
+			  
+	//manipulacao de css    
+	document.getElementById("telaJogo1").style ="display:block;"
+	document.getElementById("telaJogo1").style += "background-image: url('assets/biblioteca.jpeg')"
+	document.getElementById("telaPersonagem").style="display:none;"
 
-		'show message Help',
-
-		'y Go ahead and create an amazing Game!',
-		'y I can’t wait to see what story you’ll tell!',
-		'end'
-	]
-});
+	//innerHTML Conteúdo de tag
+	let html = `
+		<p> O nome do personagem é ${personagem.nome} </p>
+	`;
+	html ='<p class="classeP"> O nome do personagem é' + personagem.nome + "</p>"
+}

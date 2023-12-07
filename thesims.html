@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visual Novel</title>
+    <link rel="Stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>escolha seu personagem</h1>
+
+        
+    <section id="telaPersonagem">
+        <h1 class="titulo">Escolha a personagem</h1>
+
+
+        <div class="selecao">
+            <button class="botao_escolher"><a href="#" onmouseover="mostrar(helena)"onclick="iniciarOJogo(helena)"
+            >helena</a></button>
+            
+            <button class="botao_escolher"><a href="#" onmouseover="mostrar(morgana)"onclick="iniciarOJogo(morgana)">morgana</a></button>
+            
+            <button class="botao_escolher"><a href="#" onmouseover="mostrar(amelia)"onclick="iniciarOJogo(amelia)"
+            >amelia</a></button>
+                    
+            <button class="botao_escolher"><a href="#" onmouseover="mostrar(luana)"onclick="iniciarOJogo(luana)"
+            >luana</a></button>
+            
+        </div>
+
+        
+        <div>
+            <img id="foto" /> <!--Aparecer imagem-->
+            <ul class="lista_selecao">
+                <li>Nome: <span id="nome"></span></li>
+                <li>Alegria: <span id="alegria"></span></li>
+                <li>Vida: <span id="vida"></span></li>
+                <li>disposição: <span id="disposicao"></span></li>
+                
+            </ul>
+         
+        </div>
+
+    </section><!-- Fim escolha personagem -->
+
+    <section id="telaJogo1" style="display: none;">
+        
+       
+          <visual-novel>
+
+                            
+
+          </visual-novel>
+    
+           
+
+    </section>
+
+    <script src="visualNovel.js"> </script>
 </body>
 </html>
