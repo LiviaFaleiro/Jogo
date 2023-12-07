@@ -30,7 +30,7 @@ helena.nome = "Helena"
 helena.alegria = 7
 helena.vida = 9
 helena.disposicao = 8
-helena.imagem = 'assetS/helena.png'
+helena.imagem = 'assets/helena.png'
 
 let morgana = new Personagem();
 
