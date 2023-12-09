@@ -55,31 +55,28 @@ Paleontologa.energia = 20
 Paleontologa.imagem = "assets/paleontologa.png"
 Paleontologa.descricao = "Mais sujo porém possui mais energia";
 
-let PersonagemSelecionado = Personagem
+let PersonagemSelecionado;
 
 
-function telaP(Personagem) {
-    
-    document.getElementById("vida").innerText = PersonagemSelecionado.vida;
-    document.getElementById("felicidade").innerText = PersonagemSelecionado.felicidade;
-    document.getElementById("fome").innerText = PersonagemSelecionado.fome;
-    document.getElementById("saude").innerText = PersonagemSelecionado.saude;
-    document.getElementById("inteligencia").innerText = PersonagemSelecionado.inteligencia;
-    document.getElementById("energia").innerText = PersonagemSelecionado.energia;
-    document.getElementById("descricao").innerText = PersonagemSelecionado.descricao;
-    document.getElementById("foto").src = PersonagemSelecionado.imagem;
-}
-
-function selecionarPersonagem(Personagem) {
-    telaP(Personagem);
-    document.getElementById('telaP').style.display = 'none';
-    document.getElementById('nomeg').style.display = 'block';
-    PersonagemSelecionado = Personagem;
-}
-
-function selecionarGenero(genero) {
-    document.getElementById('genero').innerText = genero;
-}
+function telap(personagem) {
+    document.getElementById("vida").innerHTML = personagem.vida;
+    document.getElementById("felicidade").innerHTML = personagem.felicidade;
+    document.getElementById("fome").innerHTML = personagem.fome;
+    document.getElementById("saude").innerHTML = personagem.saude;
+    document.getElementById("inteligencia").innerHTML = personagem.inteligencia;
+    document.getElementById("energia").innerHTML = personagem.energia;
+    document.getElementById("descricao").innerHTML = personagem.descricao;
+    document.getElementById("perfilVida").innerText = "Vida: " + personagem.vida;
+    document.getElementById("perfilEnergia").innerText =
+    "Energia: " + personagem.energia;
+    document.getElementById("perfilFelicidade").innerText = "Felicidade: " + personagem.felicidade;
+    document.getElementById("perfilFome").innerText = "Fome: " + personagem.fome;
+    document.getElementById("perfilSaude").innerText = "Saúde:" + personagem.saude;
+    document.getElementById("perfilInteligencia").innerText = "Inteligência: " + personagem.inteligencia;
+    document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + personagem.dinheiro;
+    document.getElementById("perfilSujo").innerText = "Sujo: " + personagem.sujo;
+    personagemSelecionado = personagem;
+    }
 
 function avancarParaJogo() {
     var nomeDoUsuario = document.getElementById('nomeG').value;
@@ -87,15 +84,16 @@ function avancarParaJogo() {
         document.getElementById('nomeUsuario').innerText = nomeDoUsuario;
         document.getElementById('nomeg').style.display = 'none';
         document.getElementById('telaJogo').style.display = 'block';
-        document.getElementById('barraStatus').style.display = 'block';
-        atualizarBarraStatus();
+        document.getElementById('perfil').style.display = 'block';
+        // Chame a função correta para atualizar o perfil
+        atualizarPerfil(PersonagemSelecionado);
     } else {
         alert("Digite um nome válido!");
     }
 }
 
+// Adicionei a função atualizarPerfil correta
 function atualizarPerfil(Personagem) {
-
     document.getElementById("perfilVida").innerText = "Vida: " + Personagem.vida;
     document.getElementById("perfilEnergia").innerText = "Energia: " + Personagem.energia;
     document.getElementById("perfilFelicidade").innerText =  "Felicidade: " + Personagem.felicidade;
@@ -104,5 +102,4 @@ function atualizarPerfil(Personagem) {
     document.getElementById("perfilInteligencia").innerText = "Inteligência: " + Personagem.inteligencia;
     document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + Personagem.dinheiro;
     document.getElementById("perfilSaude").innerText = "Saude: " + Personagem.saude;
-
 }
