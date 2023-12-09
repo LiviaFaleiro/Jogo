@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>The Grêmio</title>
+</head>
+<body>
+<section id="telaP">
+<ul>
+<li><a href="#" onmouseover="telap(medico)"
+onclick="nome()">Médico</a></li>
+<li><a href="#" onmouseover="telap(palhaco)"
+onclick="nome()">Palhaço</a></li>
+<li><a href="#" onmouseover="telap(cozinheiro)"
+onclick="nome()">Cozinheiro</a></li>
+<li><a href="#" onmouseover="telap(estudante)"
+onclick="nome()">Estudante</a></li>
+</ul>
+<div>
+<ul>
+<li>Discrição: <span id="discrição"></span></li>
+<li>Vida: <span id="vida"></span></li>
+<li>Energia:<span id="energia"></span></li>
+<li>Felicidade: <span id="felicidade"></span></li>
+<li>Fome: <span id="fome"></span></li>
+<li>Saúde: <span id="saude"></span></li>
+<li>Inteligência: <span id="inteligencia"></span></li>
+</ul>
+</div>
+</section>
+<section id="nomeg" style="display: none;">
+<h1 style="text-align: center;">Digite seu nome</h1>
+<input type="text" id="nomeG" placeholder="Digite seu nome"
+style="text-align: center;">
+<button id="masculino"
+onclick="casa('Masculino')">Masculino</button>
+<button id="feminino"
+onclick="casa('Feminino')">Feminino</button>
+</section>
+<section id="barraco" style="display: none;">
+<h1 style="text-align: center;">Áreas da Casa</h1>
+<div style="text-align: center;">
+<button onclick="cozinha()">Cozinha</button>
+<button onclick="sala()">Sala de Descanso</button>
+<button onclick="estudo()">Sala de Estudo</button>
+<button onclick="quarto()">Quarto</button>
+<button onclick="trabalhar()">Trabalhar</button>
+<button onclick="banheiro()">Banheiro</button>
+</div>
+</section>
+<section id="cozi" style="display: none;">
+<button onclick="voltar()">Voltar</button>
+<button id="cão"
+onclick="exibirFalaNPC(cachorro)">Cachorro</button>
+<button onclick="geladeira()">Geladeira</button>
+</section>
+<section id="sala" style="display: none;">
+<button onclick="voltar()">Voltar</button>
+<button id="Amigo" onclick="exibirFalaNPC(amigo)">Luis
+Suarez</button>
+<button id="Ottop"
+onclick="exibirFalaNPC(otavio)">Otávio</button>
+<button onclick="tv()">Tv</button>
+</section>
+<section id="estu" style="display: none;">
+<button onclick="voltar()">Voltar</button>
+<button onclick="estudar()">Ler um livro</button>
+</section>
+<section id="quar" style="display: none;">
+<button onclick="voltar()">Voltar</button>
+<button onclick="cama()">Dormir</button>
+<button id="tornado" onclick="exibirFalaNPC(tornado)">Video do
+Toninho Tornado</button>
+</section>
+<section id="ban" style="display: none;">
+<button onclick="voltar()">Voltar</button>
+<button onclick="remedio1()">Paracetamol</button>
+<button onclick="remedio2()">Balinha</button>
+<button onclick="banho()">Tomar Banho</button>
+<p id="sujo" style="display: none;"></p>
+</section>
+<section id="geladeira" style="display: none;">
+<button onclick="voltar()">Voltar</button>
+<button onclick="comer1()">Sanduiche</button>
+<button onclick="comer2()">PF</button>
+<button onclick="comer3()">Energetico</button>
+<button onclick="comer4()">Frutas</button>
+</section>
+<button id="perfilButton" style="display: none;"
+onclick="mostrarPerfil()">Perfil</button>
+<button id="fecharPerfilButton" style="display: none;"
+onclick="fecharPerfil()">Fechar Perfil</button>
+<section id="perfil" style="display: none;">
+<h2 style="text-align: center;">Perfil do Personagem</h2>
+<p id="nomePerfil"></p>
+<p id="generoPerfil"></p>
+<p id="perfilVida"></p>
+<p id="perfilSaude"></p>
+<p id="perfilEnergia"></p>
+<P id="perfilSujo"></P>
+<p id="perfilFelicidade"></p>
+<p id="perfilFome"></p>
+<p id="perfilSaude"></p>
+<p id="perfilInteligencia"></p>
+<p id="perfilDinheiro"></p>
+</section>
+<script>
+let Sujando = setInterval(sujar, 45000);
+let alertaSujoExibido = false;
+let morrendo = setInterval(morrer, 30000);
+let morreu = setInterval(gameOver, 30000);
+let estude = setInterval(contador,1000);
+let estudarLiberado = true;
+const Personagem = function(){
+this.vida = 100;
+this.felicidade = 100;
+this.fome = 100;
+this.saude = 100;
+this.inteligencia = 0;
+this.energia = 100;
+this.dinheiro = 10000;
+this.sujo = 100;
+this.discrição = "Alguma coisa";
+}
+let medico = new Personagem();
+medico.vida = 100;
+medico.felicidade = 100;
+medico.fome = 100;
+medico.saude = 100;
+medico.inteligencia = 0;
+medico.energia = 100;
+medico.dinheiro = 50;
+medico.sujo = 0;
+medico.discrição = "Ele paga menos por remedios";
+let palhaco = new Personagem();
+palhaco.vida = 100;
+palhaco.felicidade = 10;
+palhaco.fome = 100;
+palhaco.saude = 100;
+palhaco.inteligencia = 0;
+palhaco.energia = 100;
+palhaco.dinheiro = 50;
+palhaco.sujo = 0;
+palhaco.discrição = "Ele perde menos energia quando vai trabalhar";
+let cozinheiro = new Personagem();
+cozinheiro.vida = 100;
+cozinheiro.felicidade = 100;
+cozinheiro.fome = 100;
+cozinheiro.saude = 100;
+cozinheiro.inteligencia = 0;
+cozinheiro.energia = 100;
+cozinheiro.dinheiro = 50;
+cozinheiro.sujo = 0;
+cozinheiro.discrição = "Ele ganha mais pontos de fome ao comer";
+let estudante = new Personagem();
+estudante.vida = 2;
+estudante.felicidade = 100;
+estudante.fome = 100;
+estudante.saude = 49;
+estudante.inteligencia = 10;
+estudante.energia = 100;
+estudante.dinheiro = 30;
+estudante.sujo = 0;
+estudante.discrição = "Ele aprende mais rapido";
+
+//Npc
+const NPC = function(){
+this.nomeN = "nome";
+this.falas = [];
+this.falasespecias = [];
+}
+let amigo = new NPC();
+amigo.nomeN = "Suarez";
+amigo.falas = ["Amanhã tem jogo do Grêmio", "Eu sou melhor que o Falencia kkkk", "Eu vou ficar no Grêmio, e ainda vou chamar o Messi"];
+amigo.falasespecias = ["Não morra amanhã tem jogo do Grêmio","Você está com uma cara pessima"];
+
+let cachorro = new NPC();
+cachorro.nomeN = "Bluezo";
+cachorro.falas = ["Me pagaram para imitar um orangotango com esquizofrenia","Abre Porta",];
+cachorro.falasespecias = ["Você está com a mesma cara eu tenho"];
+
+let otavio = new NPC();
+otavio.nomeN = "Otávio"
+otavio.falas = ["Eu amo meu vovô","Ele tinha um bigode muito legal","Meu vô morreu atirando","Quando eu crescer quero ser que nem ele e seguir os passos dele"];
+otavio.falasespecias = ["Você está parecendo meu avô"];
+
+let tornado = new NPC();
+tornado.nomeN = "Toninho Tornado"
+tornado.falas = ["Valesco Popozudo","Patrício Poeto","Chora na Tora","Lady Gago","Mandioco","Raparigo"];
+tornado.falasespecias = ["Você está com cara de Seborreio"];
+let mercador = new NPC();
+mercador.nomeN = "Vendedor";
+mercador.falas = ["Olá gostaria de comprar alguns dos meus itens, eles são inuteis, mas pode ser legal colecionar eles"];
+let nomePersonagem;
+let generoPersonagem;
+let personagemSelecionado;
+//---------------------------------------------------------------------
+function telap(personagem) {
+document.getElementById("vida").innerHTML = personagem.vida;
+document.getElementById("felicidade").innerHTML = personagem.felicidade;
+document.getElementById("fome").innerHTML = personagem.fome;
+document.getElementById("saude").innerHTML = personagem.saude;
+document.getElementById("inteligencia").innerHTML = personagem.inteligencia;
+document.getElementById("energia").innerHTML = personagem.energia;
+document.getElementById("discrição").innerHTML = personagem.discrição;
+document.getElementById("perfilVida").innerText = "Vida: " + personagem.vida;
+document.getElementById("perfilEnergia").innerText =
+"Energia: " + personagem.energia;
+document.getElementById("perfilFelicidade").innerText = "Felicidade: " + personagem.felicidade;
+document.getElementById("perfilFome").innerText = "Fome: " + personagem.fome;
+document.getElementById("perfilSaude").innerText = "Saúde:" + personagem.saude;
+document.getElementById("perfilInteligencia").innerText = "Inteligência: " + personagem.inteligencia;
+document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + personagem.dinheiro;
+document.getElementById("perfilSujo").innerText = "Sujo: " + personagem.sujo;
+personagemSelecionado = personagem;
+}
+//---------------------------------------------------------------------
+
+function nome(){
+document.getElementById("nomeg").style.display = "block";
+document.getElementById("telaP").style.display = "none";
+}
+//---------------------------------------------------------------------
+function casa(genero) {
+nomePersonagem = document.getElementById("nomeG").value;
+generoPersonagem = genero;
+document.getElementById("barraco").style.display = "block";
+document.getElementById("telaP").style.display = "none";
+document.getElementById("nomeg").style.display = "none";
+document.getElementById("perfilButton").style.display =
+"inline";
+}
+//--------------------------------------------------------------------
+function trabalhar() {
+if (personagemSelecionado) {
+if(personagemSelecionado.fome > 0 &&
+personagemSelecionado.energia >0){
+let ganhoDi = 20+((20*personagemSelecionado.inteligencia)/100);
+let ganhoD = 2+((2*personagemSelecionado.inteligencia)/100);
+if(personagemSelecionado.energia <= 40){
+let ganhoDin = 10+((10*personagemSelecionado.inteligencia)/100);
+let ganhoE = 1+((1*personagemSelecionado.inteligencia)/100);
+alert("Você está com a energia abaixo de 40, apartir de agora vai receber menos do que antes e começara a perder saude!");
+
+if (personagemSelecionado === palhaco) {
+personagemSelecionado.energia -= 5;
+personagemSelecionado.saude -= 5;
+alert("Você trabalhou e ganhou 10 reais, mas perdeu 5 de energia e 5 de saude");
+
+}
+else if(personagemSelecionado === estudante){
+personagemSelecionado.energia -= 5;
+personagemSelecionado.saude -= 5;
+alert("Você trabalhou e ganhou 5 pontos de inteligencia e 2 reais, mas perdeu 5 de energia e 5 de saude");
+}
+else {
+personagemSelecionado.energia -= 10;
+personagemSelecionado.saude -= 10;
+alert("Você trabalhou e ganhou 10 reais, mas perdeu 10 de energia e 10 de saude");
+}
+
+if(personagemSelecionado != estudante){
+personagemSelecionado.dinheiro +=
+ganhoDin;
+}
+else{
+personagemSelecionado.inteligencia +=10;
+personagemSelecionado.dinheiro += ganhoE;
+}
+personagemSelecionado.fome -=10;
+atualizarPerfil(personagemSelecionado);
+}
+else {
+if (personagemSelecionado === palhaco) {
+personagemSelecionado.energia -= 5;
+alert("Você trabalhou e ganhou 20 reais, mas perdeu 5 de energia");
+}
+else if(personagemSelecionado === estudante){
+personagemSelecionado.energia -= 5;
+alert("Você trabalhou e ganhou 10 pontos de inteligencia e 2 reais, mas perdeu 5 de energia");
+}
+else {
+personagemSelecionado.energia -= 10;
+alert("Você trabalhou e ganhou 20 reais, mas perdeu 10 de energia");
+}
+if(personagemSelecionado != estudante){
+personagemSelecionado.dinheiro +=
+ganhoDi;
+}
+else{
+personagemSelecionado.inteligencia +=10;
+personagemSelecionado.dinheiro += ganhoD;
+}
+personagemSelecionado.fome -=10;
+atualizarPerfil(personagemSelecionado);
+}
+}
+else{
+alert("Você está cansado ou com fome");
+}
+}
+}
+//---------------------------------------------------------------------
+function comer1() {
+if (personagemSelecionado) {
+if (personagemSelecionado.dinheiro >= 3 &&
+personagemSelecionado.fome < 100) {
+let ganhoFome;
+if (personagemSelecionado === cozinheiro) {
+ganhoFome = 8;
+alert("Comendo você perdeu 3 reais, mas ganhou 8 de fome");
+} else {
+ganhoFome = 4;
+alert("Comendo você perdeu 3 reais, mas ganhou 4 de fome");
+}
+if (personagemSelecionado.fome + ganhoFome <= 100)
+{
+personagemSelecionado.fome += ganhoFome;
+} else {
+personagemSelecionado.fome = 100;
+alert("Você está satisfeito agora!");
+}
+personagemSelecionado.dinheiro -= 3;
+atualizarPerfil(personagemSelecionado);
+} else {
+alert("Você está satisfeito ou está sem dinheiro");
+}
+}
+}
+//---------------------------------------------------------------------
+function comer2() {
+if (personagemSelecionado) {
+if (personagemSelecionado.dinheiro >= 5.5 &&
+personagemSelecionado.fome < 100) {
+let ganhoFome;
+if (personagemSelecionado === cozinheiro) {
+ganhoFome = 15;
+alert("Comendo você perdeu 5.5 reais, mas ganhou 15 de fome");
+} else {
+ganhoFome = 8.5;
+alert("Comendo você perdeu 8.5 reais, mas ganhou 7.5 de fome");
+}
+if (personagemSelecionado.fome + ganhoFome <= 100)
+{
+personagemSelecionado.fome += ganhoFome;
+} else {
+personagemSelecionado.fome = 100;
+alert("Você está satisfeito agora!");
+}
+personagemSelecionado.dinheiro -= 5.5;
+atualizarPerfil(personagemSelecionado);
+} else {
+alert("Você está satisfeito ou está sem dinheiro");
+}
+}
+}
+//---------------------------------------------------------------------
+
+function comer3() {
+if (personagemSelecionado) {
+if (personagemSelecionado.dinheiro >= 4 &&
+personagemSelecionado.energia < 100) {
+let ganhoFome;
+let ganhosau = 2;
+if (personagemSelecionado === cozinheiro) {
+ganhoFome = 10;
+alert("Comendo você perdeu 4 reais e 2 de saude, mas ganhou 10 de energia");
+} else {
+ganhoFome = 8;
+alert("Comendo você perdeu 4 reais e 2 de saude, mas ganhou 8 de enrgia");
+}
+if (personagemSelecionado.energia + ganhoFome <=
+100) {
+personagemSelecionado.energia += ganhoFome;
+} else {
+personagemSelecionado.fome = 100;
+alert("Você está satisfeito agora!");
+}
+if(personagemSelecionado.saude + ganhosau >= 100){
+personagemSelecionado.saude -=ganhosau;
+}
+else{
+personagemSelecionado.saude = 0;
+}
+personagemSelecionado.dinheiro -= 4;
+atualizarPerfil(personagemSelecionado);
+} else {
+alert("Você está satisfeito ou está sem dinheiro");
+}
+}
+}
+//-----------------------------------------------------------------
+
+function comer4() {
+if (personagemSelecionado) {
+if (personagemSelecionado.dinheiro >= 4 &&
+personagemSelecionado.fome < 100) {
+let ganhoFome;
+let ganhosau = 2;
+if (personagemSelecionado === cozinheiro) {
+ganhoFome = 6;
+alert("Comendo você perdeu 3 reais, mas ganhou 6 de fome e 2 de saude");
+} else {
+ganhoFome = 3;
+alert("Comendo você perdeu 3 reais, mas ganhou 3 de fome e 2 de saude");
+}
+if (personagemSelecionado.fome + ganhoFome <= 100)
+{
+personagemSelecionado.fome += ganhoFome;
+} else {
+personagemSelecionado.fome = 100;
+alert("Você está satisfeito agora!");
+}
+if(personagemSelecionado.saude + ganhosau <= 100){
+personagemSelecionado.saude +=ganhosau;
+}
+else{
+personagemSelecionado.saude = 100;
+}
+personagemSelecionado.dinheiro -= 3;
+atualizarPerfil(personagemSelecionado);
+} else {
+alert("Você está satisfeito ou está sem dinheiro");
+}
+}
+}
+//------------------------------------------------------------------
+
+function tv(){
+if(personagemSelecionado){
+if(personagemSelecionado.felicidade < 100 &&
+personagemSelecionado.energia > 0){
+if(personagemSelecionado === estudante){
+personagemSelecionado.felicidade += 15;
+personagemSelecionado.energia -= 5;
+alert("Você está assistindo o filme Gente Grande 1, e ganhou 15 de felicidade, mas perdeu 5 de energia");
+}
+else{
+personagemSelecionado.felicidade += 10;
+personagemSelecionado.energia -= 10;
+alert("Você está assistindo o algum filme chato, e ganhou 10 de felicidade, mas perdeu 10 de energia, crianças se divertem mais");
+}
+atualizarPerfil(personagemSelecionado);
+}
+else{
+alert("Você está muito cansado para assistir Tv ou você está feliz o suficiente e quer fazer outra coisa");
+}
+}
+}
+//---------------------------------------------------------------------
+function remedio1(){
+if(personagemSelecionado){
+alert("Esse remdio aumenta sua vida quando ela estiver em 5 ou menos, ele custa 30 reais(25 se voce for um medico)");
+if(personagemSelecionado.saude <= 5 &&
+personagemSelecionado.dinheiro >= 30){
+personagemSelecionado.saude = 100;
+if(personagemSelecionado === medico){
+personagemSelecionado.dinheiro -= 25;
+}
+else{
+personagemSelecionado.dinheiro -= 30;
+}
+}
+else{
+if(personagemSelecionado.saude > 5){
+alert("Você tem que estar muito mal(5 ou menos de vida) para tomar esse remedio");
+}
+else{
+alert("Você não tem dinheiro o suficiente para coprar esse remedio");
+}
+}
+atualizarPerfil(personagemSelecionado);
+}
+else {
+alert("Nenhum personagem selecionado.");
+}
+}
+function remedio2(){
+if(personagemSelecionado){
+alert("Esse remedio aumenta sua felicidade quando ela estiver em 0, ele custa 25 reais(15 se você for um medico)");
+if(personagemSelecionado.felicidade <= 0 &&
+personagemSelecionado.dinheiro >= 25){
+personagemSelecionado.felicidade = 100;
+if(personagemSelecionado === medico){
+personagemSelecionado.dinheiro -= 15
+}
+else{
+personagemSelecionado.dinheiro-=25;
+}
+}
+else{
+if(personagemSelecionado.felicidade> 5){
+alert("Você tem que estar muito mal(0 de felicidade) para tomar esse remedio");
+}
+}
+atualizarPerfil(personagemSelecionado);
+}
+}
+//--------------------------------------------------------------------
+function sujar() {
+if (personagemSelecionado &&
+(document.getElementById("barraco").style.display ===
+"block" ||
+document.getElementById("cozi").style.display ===
+"block" ||
+document.getElementById("quar").style.display ===
+"block" ||
+document.getElementById("estu").style.display ===
+"block" ||
+document.getElementById("sala").style.display ===
+"block" ||
+document.getElementById("ban").style.display ===
+"block")) {
+let ganhoSujo = 0;
+document.getElementById("sujo").innerHTML = ganhoSujo
++= 0.5;
+if (personagemSelecionado.sujo + ganhoSujo <= 100) {
+personagemSelecionado.sujo += ganhoSujo;
+} else {
+personagemSelecionado.sujo = 100;
+if (!alertaSujoExibido) {
+alert("Você está muito sujo, você vai começar a perder sua saúde aos poucos, tome um banho para se limpar");
+alertaSujoExibido = true;
+}
+clearInterval(Sujando);
+}
+atualizarPerfil(personagemSelecionado);
+}
+}
+//---------------------------------------------------------------------
+
+function banho() {
+if (personagemSelecionado) {
+if (personagemSelecionado.sujo >= 1 &&
+personagemSelecionado.energia >= 5) {
+let perdeSuj = 30;
+personagemSelecionado.energia -= 5;
+if (personagemSelecionado.sujo - perdeSuj >= 0) {
+personagemSelecionado.sujo -= perdeSuj;
+} else {
+personagemSelecionado.sujo = 0;
+}
+alert("Você tomou banho e perdeu 30 pontos de sujo, e 5 pontos de energia");
+alertaSujoExibido = false;
+if (personagemSelecionado.sujo === 100) {
+clearInterval(Sujando);
+} else {
+Sujando = setInterval(sujar, 60000);
+}
+atualizarPerfil(personagemSelecionado);
+} else {
+if (personagemSelecionado.sujo === 0) {
+alert("Você está limpo");
+} else {
+alert("Você não tem energia nem para tomar um banho!");
+}
+}
+}
+}
+//-------------------------------------------------------------------
+
+function morrer() {
+if (personagemSelecionado &&
+(document.getElementById("barraco").style.display ===
+"block" ||
+document.getElementById("cozi").style.display ===
+"block" ||
+document.getElementById("quar").style.display ===
+"block" ||
+document.getElementById("estu").style.display ===
+"block" ||
+document.getElementById("sala").style.display ===
+"block" ||
+document.getElementById("ban").style.display ===
+"block")) {
+if (personagemSelecionado.sujo === 100) {
+if (personagemSelecionado.saude > 0) {
+document.getElementById("saude").innerHTML =
+personagemSelecionado.saude -= 1;
+alert("Você está Doente, vai perder 1 de saúde a cada 30 segundo");
+} else {
+personagemSelecionado.saude = 0;
+}
+atualizarPerfil(personagemSelecionado);
+}
+}
+}
+//--------------------------------------------------------------------
+
+function gameOver(){
+if(personagemSelecionado &&
+(document.getElementById("barraco").style.display ===
+"block" ||
+document.getElementById("cozi").style.display ===
+"block" ||
+document.getElementById("quar").style.display ===
+"block" ||
+document.getElementById("estu").style.display ===
+"block" ||
+document.getElementById("sala").style.display ===
+"block" ||
+document.getElementById("ban").style.display ===
+"block")){
+if(personagemSelecionado.saude === 0){
+if (personagemSelecionado.vida> 0) {
+document.getElementById("saude").innerHTML =
+personagemSelecionado.vida -= 1;
+alert("Você está perdendo 1 de vida a cada 1 minuto");
+} else {
+personagemSelecionado.vida = 0;
+alert("Game Over kkkkkk Que Ridiculo um jogo tão simples e você consegui perder");
+location.reload();
+}
+atualizarPerfil(personagemSelecionado);
+}
+}
+}
+//---------------------------------------------------------------------
+function cama(){
+if(personagemSelecionado){
+if(personagemSelecionado.energia <100 &&
+personagemSelecionado.fome >= 10){
+let ganharEne=25;
+if(personagemSelecionado.energia + ganharEne
+<=100){
+personagemSelecionado.energia += ganharEne;
+personagemSelecionado.fome -= 10;
+alert("Ao dormir você recuperou sua energia em 25, mas acordou com fome(perdeu 10 pontos de fome)");
+}
+else{
+personagemSelecionado.energia = 100;
+alert("Você está discansado");
+}
+atualizarPerfil(personagemSelecionado);
+}
+}
+}
+//---------------------------------------------------------------------
+let cont = 0;
+function contador() {
+cont += 2;
+if (cont >= 60) { // 120 segundos = 2 minutos
+estudarLiberado = true;
+cont = 0; // Reinicia o contador
+}
+}
+function estudar(){
+if(personagemSelecionado){
+if(estudarLiberado === true){
+if(personagemSelecionado.inteligencia <=100 &&
+personagemSelecionado.energia >= 5){
+let ganharInt=5;
+if(personagemSelecionado.inteligencia + ganharInt
+<= 100){
+if(personagemSelecionado === estudante){
+
+personagemSelecionado.inteligencia += ganharInt + 3;
+alert("Você passou algumas horas estudando e ganhou 8 pontos de inteligencia, mas ficou cansado(perdeu 5 de energia)");
+
+}
+else{
+personagemSelecionado.inteligencia +=
+ganharInt;
+alert("Você passou algumas horas estudando e ganhou 5 pontos de inteligencia, mas ficou cansado(perdeu 5 de energia")
+}
+personagemSelecionado.energia -= 5;
+estudarLiberado = false;
+
+}
+else{
+personagemSelecionado.inteligencia = 100;
+alert("Você já é o proprio Einstein");
+}
+}
+atualizarPerfil(personagemSelecionado);
+}
+else{
+alert("Você deve esperar 1 minutos para estudar novamente");
+}
+}
+}
+//---------------------------------------------------------------------
+function atualizarPerfil(personagem) {
+document.getElementById("perfilVida").innerText = "Vida: "
++ personagem.vida;
+document.getElementById("perfilEnergia").innerText = "Energia: " + personagem.energia;
+document.getElementById("perfilFelicidade").innerText =
+"Felicidade: " + personagem.felicidade;
+document.getElementById("perfilFome").innerText = "Fome: " + personagem.fome;
+document.getElementById("perfilSaude").innerText = "Saúde: " + personagem.saude;
+document.getElementById("perfilInteligencia").innerText =
+"Inteligência: " + personagem.inteligencia;
+document.getElementById("perfilDinheiro").innerText =
+"Dinheiro: " + personagem.dinheiro;
+document.getElementById("perfilSaude").innerText = "Saude: " + personagem.saude;
+document.getElementById("perfilSujo").innerText = "Sujo: "+ personagem.sujo; }
+//---------------------------------------------------------------------
+
+function esconderBotaoPerfil() {
+document.getElementById("perfilButton").style.display =
+"none";
+}
+//---------------------------------------------------------------------
+
+function mostrarPerfil() {
+document.getElementById("perfil").style.display = "block";
+document.getElementById("nomePerfil").innerText = "Nome: "
++ nomePersonagem;
+document.getElementById("generoPerfil").innerText =
+"Gênero: " + generoPersonagem;
+esconderBotaoPerfil();
+document.getElementById("fecharPerfilButton").style.display
+= "inline";
+}
+//---------------------------------------------------------------------
+
+function fecharPerfil() {
+document.getElementById("perfil").style.display = "none";
+document.getElementById("fecharPerfilButton").style.display
+= "none";
+document.getElementById("perfilButton").style.display =
+"inline";
+}
+//---------------------------------------------------------------------
+
+function esconderPerfil() {
+document.getElementById("perfil").style.display = "none";
+}
+//---------------------------------------------------------------------
+
+function cozinha(){
+document.getElementById("cozi").style.display = "block";
+document.getElementById("geladeira").style.display =
+"none";
+document.getElementById("barraco").style.display = "none";
+document.getElementById("telaP").style.display = "none";
+document.getElementById("nomeg").style.display = "none";
+}
+//---------------------------------------------------------------------
+
+function sala(){
+document.getElementById("sala").style.display = "block";
+document.getElementById("barraco").style.display = "none";
+document.getElementById("telaP").style.display = "none";
+document.getElementById("nomeg").style.display = "none";
+document.getElementById("geladeira").style.display =
+"none";
+mostrarPerfil();
+}
+//---------------------------------------------------------------------
+
+function exibirFalaNPC(npc) {
+const indiceFala = Math.floor(Math.random() *
+npc.falas.length);
+const falaAleatoria = npc.falas[indiceFala];
+const indiceFalaEspecial =
+Math.floor(Math.random()*npc.falasespecias.length);
+const falaes = npc.falasespecias[indiceFalaEspecial]
+if(personagemSelecionado.saude <= 50){
+alert(falaes);
+}
+else{
+alert(falaAleatoria);
+}
+}
+//---------------------------------------------------------------------
+
+function estudo(){
+document.getElementById("estu").style.display = "block";
+document.getElementById("barraco").style.display = "none";
+document.getElementById("telaP").style.display = "none";
+document.getElementById("nomeg").style.display = "none";
+document.getElementById("geladeira").style.display =
+"none";
+mostrarPerfil();
+}
+//--------------------------------------------------------------------
+
+function quarto(){
+document.getElementById("quar").style.display = "block";
+document.getElementById("barraco").style.display = "none";
+document.getElementById("telaP").style.display = "none";
+document.getElementById("nomeg").style.display = "none";
+document.getElementById("geladeira").style.display =
+"none";
+mostrarPerfil();
+}
+function banheiro(){
+document.getElementById("ban").style.display = "block";
+document.getElementById("barraco").style.display = "none";
+document.getElementById("telaP").style.display = "none";
+document.getElementById("nomeg").style.display = "none";
+document.getElementById("geladeira").style.display =
+"none";
+mostrarPerfil();
+}
+function geladeira(){
+document.getElementById("geladeira").style.display =
+"block";
+document.getElementById("cozi").style.display = "none"
+document.getElementById("barraco").style.display = "none";
+document.getElementById("telaP").style.display = "none";
+document.getElementById("nomeg").style.display = "none";
+mostrarPerfil();
+}
+//--------------------------------------------------------------------
+
+function voltar(){
+document.getElementById("barraco").style.display = "block";
+document.getElementById("telaP").style.display = "none";
+document.getElementById("nomeg").style.display = "none";
+document.getElementById("cozi").style.display = "none";
+document.getElementById("quar").style.display = "none";
+document.getElementById("estu").style.display = "none";
+document.getElementById("sala").style.display = "none";
+document.getElementById("ban").style.display = "none";
+document.getElementById("geladeira").style.display =
+"none";
+}
+</script>
+</body>
+</html>

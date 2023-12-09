@@ -1,60 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visual Novel</title>
-    <link rel="Stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>PROFISSÕES</title>
+<link rel="Stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
-        
-    <section id="telaPersonagem">
-        <h1 class="titulo">Escolha a personagem</h1>
+<section id="telaP">
 
+        <ul>
 
-        <div class="selecao">
-            <button class="botao_escolher"><a href="#" onmouseover="mostrar(helena)"onclick="iniciarOJogo(helena)"
-            >helena</a></button>
-            
-            <button class="botao_escolher"><a href="#" onmouseover="mostrar(morgana)"onclick="iniciarOJogo(morgana)">morgana</a></button>
-            
-            <button class="botao_escolher"><a href="#" onmouseover="mostrar(amelia)"onclick="iniciarOJogo(amelia)"
-            >amelia</a></button>
-                    
-            <button class="botao_escolher"><a href="#" onmouseover="mostrar(luana)"onclick="iniciarOJogo(luana)"
-            >luana</a></button>
-            
-        </div>
+            <li><a href="#" onmouseover="telaP(Programadora)" onclick="nome()">Programadora</a></li>
+            <li><a href="#" onmouseover="telaP(Atriz)" onclick="nome()">Atriz</a></li>
+            <li><a href="#" onmouseover="telaP(Cozinheira)" onclick="nome()">Cozinheira</a></li>
+            <li><a href="#" onmouseover="telaP(Paleontologa)" onclick="nome()">Paleontologa</a></li>
 
-        
-        <div>
-            <img id="foto" /> <!--Aparecer imagem-->
-            <ul class="lista_selecao">
-                <li>Nome: <span id="nome"></span></li>
-                <li>Alegria: <span id="alegria"></span></li>
-                <li>Vida: <span id="vida"></span></li>
-                <li>disposição: <span id="disposicao"></span></li>
+        </ul>
+
+                <div>
+                    <ul>
+
+                        <li>Descrição: <span id="descricao"></span></li>
+                        <li>Vida: <span id="vida"></span></li>
+                        <li>Energia:<span id="energia"></span></li>
+                        <li>Felicidade: <span id="felicidade"></span></li>
+                        <li>Fome: <span id="fome"></span></li>
+                        <li>Saúde: <span id="saude"></span></li>
+                        <li>Inteligência: <span id="inteligencia"></span></li>
+
+                    </ul>
+                </div>
+</section>
+
+<section id="nomeg" style="display: none;">
+
+                <h1 style="text-align: center;">Digite seu nome</h1>
                 
-            </ul>
-         
-        </div>
-
-    </section><!-- Fim escolha personagem -->
-
-    <section id="telaJogo1" style="display: none;">
-        
-       
-          <visual-novel>
-
-                            
-
-          </visual-novel>
-    
-           
+                <input type="text" id="nomeG" placeholder="Digite seu nome"
+                style="text-align: center;">
+                
+                <button id="masculino" onclick="casa('Masculino')">Masculino</button>
+                <button id="feminino" onclick="casa('Feminino')">Feminino</button>
 
     </section>
 
-    <script src="visualNovel.js"> </script>
+
+    <section id="cidade" style="display: none;">
+
+            <h1 style="text-align: center;">O que fazer?</h1>
+            <div style="text-align: center;">
+
+                    <button onclick="cozinha()">lanchonete do prédio</button>
+                    <button onclick="festa()">Festar</button>
+                    <button onclick="estudo()">Estudar</button>
+                    <button onclick="quarto()">Domir</button>
+                    <button onclick="trabalhar()">Trabalhar</button>
+                    <button onclick="banheiro()">Tomar Banho e fazer Higiene</button>
+
+            
+    </section>
+
+
+    <section id="cozinha" style="display: none;">
+
+            <button onclick="voltar()">Voltar</button>
+            <button id="cão" onclick="exibirFalaNPC(cachorro)">Cachorro</button>
+            <button onclick="geladeira()">Geladeira</button>
+
+    </section>
+
+    <section id="sala" style="display: none;">
+            <button onclick="voltar()">Voltar</button>
+            <button id="Amigo" onclick="exibirFalaNPC(amigo)">Luis Suarez</button>
+            <button id="Ottop" onclick="exibirFalaNPC(otavio)">Otávio</button>
+            <button onclick="tv()">Tv</button>
+
+    </section>
+   
+            <section id="estudo" style="display: none;">
+            <button onclick="voltar()">Voltar</button>
+            <button onclick="estudar()">Ler um livro</button>
+
+    </section>
+
+            <section id="quarto" style="display: none;">
+            <button onclick="voltar()">Voltar</button>
+            <button onclick="cama()">Dormir</button>
+            <button id="tornado" onclick="exibirFalaNPC(tornado)">Video do Toninho Tornado</button>
+
+    </section>
+
+    <section id="banheiro" style="display: none;">
+
+            <button onclick="voltar()">Voltar</button>
+            <button onclick="escovardentes()">Escovar os dentes</button>
+            <button onclick="lavarMaos()">Lavar Mãos</button>
+            <button onclick="banho()">Tomar Banho</button>
+            <p id="sujo" style="display: none;"></p>
+
+    </section>
+
+            <section id="lanchonete do prédio" style="display: none;">
+            <button onclick="voltar()">Voltar</button>
+            <button onclick="comer1()">Sanduiche</button>
+            <button onclick="comer2()">PF</button>
+            <button onclick="comer3()">Energetico</button>
+            <button onclick="comer4()">Frutas</button>
+
+    </section>
+
+                        <button id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
+                        <button id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
+
+
+    <section id="perfil" style="display: none;">
+
+            <h2 style="text-align: center;">Perfil do Personagem</h2>
+            <p id="nomePerfil"></p>
+            <p id="generoPerfil"></p>
+            <p id="perfilVida"></p>
+            <p id="perfilSaude"></p>
+            <p id="perfilEnergia"></p>
+            <p id="perfilFelicidade"></p>
+            <p id="perfilFome"></p>
+            <p id="perfilSaude"></p>
+            <p id="perfilInteligencia"></p>
+            <p id="perfilDinheiro"></p>
+            
+    </section>
+</div>
+<script src="visualNovel.js"></script>
 </body>
 </html>

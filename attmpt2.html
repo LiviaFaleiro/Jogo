@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentativa 2 jogo</title>
+</head>
+<body>
+    <section id="telaP">
+        <!-- HUD 1 -->
+        <ul>
+            <li><a href="#" onmouseover="telaP(Programadora)" onclick="selecionarPersonagem(Programadora)">Programador</a></li>
+            <li><a href="#" onmouseover="telaP(Atriz)" onclick="selecionarPersonagem(Atriz)">Atriz</a></li>
+            <li><a href="#" onmouseover="telaP(Cozinheira)" onclick="selecionarPersonagem(Cozinheira)">Cozinheira</a></li>
+            <li><a href="#" onmouseover="telaP(Paleontologa)" onclick="selecionarPersonagem(Paleontologa)">Paleontologa</a></li>
+        </ul>
+        <div>
+            <ul>
+                <li>Descrição: <span id="descricao"></span></li>
+                <li>Vida: <span id="vida"></span></li>
+                <li>Energia: <span id="energia"></span></li>
+                <li>Felicidade: <span id="felicidade"></span></li>
+                <li>Fome: <span id="fome"></span></li>
+                <li>Saúde: <span id="saude"></span></li>
+                <li>Inteligência: <span id="inteligencia"></span></li>
+                <img id="foto" />
+                
+            </ul>
+        </div>
+    </section>
+
+    <section id="nomeg" style="display: none;">
+        <!-- HUD 2 -->
+        <h1 style="text-align: center;">Digite seu nome</h1>
+        
+        <input type="text" id="nomeG" placeholder="Digite seu nome" style="text-align: center;">
+        
+        <button id="masculino" onclick="selecionarGenero('Masculino')">Masculino</button>
+        <button id="feminino" onclick="selecionarGenero('Feminino')">Feminino</button>
+        
+        <!-- Adicione este botão para avançar para o próximo HUD -->
+        <button id="avancarParaJogo" onclick="avancarParaJogo()">Avançar para o Jogo</button>
+    </section>
+
+    <section id="telaJogo" style="display: none">
+        <!-- HUD 3 -->
+        <div style="display: flex;">
+            <div class="boxTexto" id="boxTexto">
+                <h1 id="startext">Olá Bem vindo(a) a THE SIMS NOVEL!! Um THE SIMS COM INTERFACE DE VISUAL NOVEL. Aqui estão alguns lugares que voce pode visitar e executar ações</h1>   
+            </div>
+            <div class="imgBox">
+                <img class="mago" src="assets/mago.png">
+            </div>
+        </div>
+        <div id="opcoes">
+            <button class="opButton1" onclick="escolha('trabalhar')">Trabalhar</button>
+            <button class="opButton1" onclick="escolha('festa')">Ir a uma Festa</button>
+            <button class="opButton1" onclick="escolha('mercado')">Ir ao Mercado</button> <!---Inventário-->
+            <button class="opButton1" onclick="escolha('comer')">Comer</button>
+            <button class="opButton1" onclick="escolha('banheiro')">Ir ao Banheiro</button>
+            <button class="opButton1" onclick="escolha('dormir')">Dormir</button>
+        </div>
+    </section>
+
+    <section id="caixaTrabalho" style="display: none">
+        <h2>Opções de Trabalho</h2>
+        <button class="acaoTrabalho" onclick="acaoTrabalho('pesquisa')">Trabalhar em uma Pesquisa</button>
+        <button class="acaoTrabalho" onclick="acaoTrabalho('laboratorio')">Ir para o Laboratório</button>
+        <button class="acaoTrabalho" onclick="acaoTrabalho('reuniao')">Fazer uma Reunião</button>
+    </section>
+      
+    <section id="festa" style="display: none">
+
+              <button class="acaoFestar" onclick="acaoFestar('dancar')">Dançar</button>
+              <button class="acaoFestar" onclick="acaoFestar('beber')">Beber</button>
+              <button class="acaoFestar" onclick="acaoFestar('conversar')">Conversar com algum estranho</button><!--NPC 1-->
+
+
+    </section id="mercado" style="display: none">
+
+                <button class="acaoComprar" onclick="acaoComprar('alface')">Salada</button>
+                <button class="acaoComprar" onclick="acaoComprar('hamburguer')">Hamburguer</button>
+                <button class="acaoComprar" onclick="acaoComprar('bolo')">Bolo</button>
+
+<!--Botao comer o que tem no inventario de comidaaaaaaaaaaaaa-->
+
+    </section>
+
+
+    <section id="banheiro" style="display: none">
+
+
+              <button class="acaoBanheiro" onclick="acaoBanheiro('banho')">Tomar banho</button>
+              <button class="acaoBanheiro" onclick="acaoBanheiro('escovar')">Escovar os Dentes</button>
+              <button class="acaoBanheiro" onclick="acaoBanheiro('necessidade')">Ir ao banheiro</button>
+
+    </section>
+
+
+
+    <section id="botaoVoltar" style="display: none;">
+        <button onclick="voltarParaMenu()">Voltar para o Menu</button>
+    </section>
+
+    <!-- Adicione a barra de status -->
+    <section id="barraStatus" style="display: none;">
+        <h2>Status do Personagem:</h2>
+        <p>Gênero: <span id="genero"></span></p>
+        <p>Nome: <span id="nomeUsuario"></span></p>
+        <p>Vida: <span id="statusVida"></span></p>
+        <p>Energia: <span id="statusEnergia"></span></p>
+        <p>Felicidade: <span id="statusFelicidade"></span></p>
+        <p>Fome: <span id="statusFome"></span></p>
+        <p>Saúde: <span id="statusSaude"></span></p>
+        <p>Inteligência: <span id="statusInteligencia"></span></p>
+        <p>Dinheiro: <span id="statusDinheiro"></span></p>
+    </section>
+
+    <script src="tentativa2.js"></script>      
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Otterlandia </title>
+    <link rel="shortcut icon" type="img/png" href="assets/favicon-32x32.png"/>
+    <link rel="stylesheet" type="text/css" href="lindo.css">
+   
+</head>
+
+<body>
+
+    
+<section id = "TelaPerso">
+
+    <h1 class = "title"> Escolha seu personagem </h1>
+    
+    <button class="botao" type="button"onmouseover= "telainicio(guerreira)" onclick = "iniciar(guerreira)" >Guerreira</button>
+    <button class="botao" type="button"onmouseover= "telainicio(pescadora)" onclick = "iniciar(pescadora)" >Pescadora</button>
+    <button class="botao" type="button"onmouseover= "telainicio(chef)" onclick = "iniciar(chef)">Chef</button>
+    <button class="botao" type="button"onmouseover= "telainicio(florista)" onclick = "iniciar(florista)" >Florista</button>
+    
+
+    <div class="progressbar">
+    <label for="barraVida"> Vida: </label>
+    <progress class="item" id="barraVida" value="0" max="100" style="display: block;"></progress>
+    
+    <label for = "barraAlegria"> Alegria: </label>
+    <progress class="item" id="barraAlegria" value="0" max="100" style = "display: block;"></progress>
+
+    <label for = "barraDispo"> Disposição: </label>
+    <progress class="item" id="barraDispo" value="0" max="100" style = "display: block;"></progress>
+    
+    <label for = "barraFome"> Fome: </label>
+    <progress class="item" id="barraFome" value="0" max="100" style = "display: block;"></progress>
+    </div>
+
+    <div id="caracteristicas">
+        <img id="foto" />
+       <p> <span id="nome"> </span> </p>
+    </div>
+
+</section> <!--fim escolha do personagem-->
+
+<section id = "telaJogo" style = "display: none">
+    <div style="display: flex;">
+        <div class ="boxTexto" id="boxTexto">
+             <h1 id = "startext">olá pequeno gafanhoto! Bem vindo a <b>"Otterlandia"</b> Procura algo especifico? </h1>   
+         </div>
+         <div class = "imgBox">
+              <img class = "mago" src="assets/mago.png">
+         </div>
+    </div>
+    <div id = "opcoes">
+        <button class = "opButton1" onclick = "escolha('op')"> Sim, por favor! </button>
+    </div>
+    
+    <!--<h1 id = "text1">oraora, eu conheço tudo por aqui. Diga-me do que precisas e eu digo onde encontrará! </h1>
+    -->
+</section>
+
+    <script src="jogo.js"> </script>
+    
+</body>
+</html>
