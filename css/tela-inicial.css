@@ -1,0 +1,29 @@
+body {
+    background-image: url(/assets/cenario/main-screen.jpg);
+    background-size: cover;
+}
+
+.characteristics {
+    background-color: var(--color-second);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 65%;
+    margin: auto; 
+    height: 18%;
+    width: 70%;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.parametros {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--color-ninth);
+    margin: 5px 30px;
+}
