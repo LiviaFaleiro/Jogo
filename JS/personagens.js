@@ -53,6 +53,7 @@ let generoPersonagem;
 let personagemSelecionado;
 
 function telap(personagem) {
+    
     document.getElementById("vida").innerHTML = personagem.vida;
     document.getElementById("felicidade").innerHTML = personagem.felicidade;
     document.getElementById("fome").innerHTML = personagem.fome;
@@ -91,8 +92,7 @@ function telap(personagem) {
         }
     
             function atualizarPerfil(personagem) {
-                document.getElementById("perfilVida").innerText = "Vida: "
-                + personagem.vida;
+                document.getElementById("perfilVida").innerText = "Vida: " + personagem.vida;
                 document.getElementById("perfilEnergia").innerText = "Energia: " + personagem.energia;
                 document.getElementById("perfilFelicidade").innerText =
                 "Felicidade: " + personagem.felicidade;
@@ -105,8 +105,6 @@ function telap(personagem) {
         }
 
        
-
-
 
         
 
