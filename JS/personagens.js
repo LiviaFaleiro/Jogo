@@ -61,8 +61,7 @@ function telap(personagem) {
     document.getElementById("dinheiro").innerHTML = personagem.dinheiro;
     document.getElementById("descricao").innerHTML = personagem.descricao;
 
-
-
+    
     document.getElementById("perfilVida").innerText = "Vida: " + personagem.vida;
     document.getElementById("perfilEnergia").innerText = "Energia: " + personagem.energia;
     document.getElementById("perfilFelicidade").innerText = "Felicidade: " + personagem.felicidade;
