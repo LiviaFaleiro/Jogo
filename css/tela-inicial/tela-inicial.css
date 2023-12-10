@@ -12,7 +12,7 @@ body {
     left: 0; 
     right: 0;
     top: 65%;
-    margin: auto; 
+    margin: auto;
     height: 18%;
     width: 70%;
     border-radius: 30px;
@@ -21,171 +21,10 @@ body {
     z-index: 2;
 }
 
-.parametros {
+.descriptionstyle{
     font-family: 'Montserrat', sans-serif;
     font-size: 25px;
     font-weight: bold;
     color: var(--color-ninth);
     margin: 5px 30px;
-}
-#vida{
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-}
-.vida{
-
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-
-}
-.descricao{
-
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-
-}
-
-#descricao{
-
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-}
-
-#dinheiro{
-
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-    
-}
-
-.dinheiro{
-
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-}
-
-#felicidade{
-
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-}
-
-.felicidade{
-
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-}
-
-#energia{
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-}
-
-.energia{
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-}
-
-#fome{
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-}
-
-.fome{
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-}
-
-#inteligencia{
-
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
-
-}
-
-.inteligencia{
-
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    color: var(--color-ninth);
-    margin: 5px 30px;
-
 }

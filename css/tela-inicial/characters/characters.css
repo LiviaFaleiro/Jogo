@@ -12,47 +12,64 @@
 }
 
 .chr.-co {
-    top: 320px;
+    top: 38%;
     left: 16%;
+    background-image: url(/assets/personagens/cozinheira.png);
+    height: 335px;
+    width: 190px;
     transition: 0.5s;
 }
 
 .chr.-co:hover {
+    background-image: url(/assets/personagens/cozinheiraSelecionada.png);
     -webkit-transform: rotate(-15deg) scale(1.2) translateY(-20px);
     transition: 0.5s;
+    z-index: 1;
 }
 
 .chr.-pr {
-    top: 320px;
+    top: 38%;
     left: 31%;
+    background-image: url(/assets/personagens/programadora.png);
+    height: 300px;
+    width: 270px;
     transition: 0.5s;
 }
 
 .chr.-pr:hover {
+    background-image: url(/assets/personagens/programdoraEscolhida.png);
     -webkit-transform: rotate(-15deg) scale(1.2) translateY(-20px);
     transition: 0.5s;
     z-index: 1;
 }
 
 .chr.-pa {
-    top: 320px;
+    top: 38%;
     left: 50%;
+    background-image: url(/assets/personagens/paleontologa.png);
+    height: 290px;
+    width: 180px;
     transition: 0.5s;
 }
 
 .chr.-pa:hover {
+    background-image: url(/assets/personagens/paleontologaEscolhida.png);
     -webkit-transform: rotate(-15deg) scale(1.2) translateY(-20px);
     transition: 0.5s;
     z-index: 1;
 }
 
 .chr.-at {
-    top: 320px;
+    top: 38%;
     left: 64%;
+    background-image: url(/assets/personagens/atriz.png);
+    width: 240px;
+    height: 290px;
     transition: 0.5s;
 }
 
 .chr.-at:hover {
+    background-image: url(/assets/personagens/atrizEscolhida.png);
     -webkit-transform: rotate(-15deg) scale(1.2) translateY(-20px);
     transition: 0.5s;
     z-index: 1;

@@ -21,66 +21,57 @@
 
     <div class="characters">
 
-        <div class="chr -co">
+        <div class="chr -co" onmouseover="telap(cozinheira)" onclick="nome()">
             <p class="nomes">Cozinheira</p>
-        <img class="Cozinheira"  href="#" onmouseover="telap(cozinheira)" onclick="nome()"src="/assets/personagens/cozinheira.png" alt="Cozinheira" width="230px"></div>
+        </div>
 
-        <div class="chr -pr">
+        <div class="chr -pr" onmouseover="telap(programadora)" onclick="nome()">
             <p class="nomes">Programadora</p>
-        <img class="Programadora"  href="#" onmouseover="telap(programadora)" onclick="nome()" src="/assets/personagens/programadora.png" alt="Programadora" width="320px"></div>
+        </div>
 
-        <div class="chr -pa">
-
+        <div class="chr -pa" onmouseover="telap(paleontologa)" onclick="nome()">
             <p class="nomes">Paleontologa</p>
-
-        <img class="Paleontologa" href="#" onmouseover="telap(paleontologa)" onclick="nome()" src="/assets/personagens/paleontologa.png" alt="Paleontologa" width="230px"></div>
+        </div>
         
-
-        <div class="chr -at">
+        <div class="chr -at" onmouseover="telap(atriz)" onclick="nome()">
             <p class="nomes">Atriz</p>
-        <img class="Atriz"  href="#" onmouseover="telap(atriz)" onclick="nome()" src="/assets/personagens/atriz.png" alt="Atriz" width="320px"></div>
+        </div>
     
-
+ 
     <div class="characteristics">
 
-        <p class="vida">Vida:<span id="vida"></span></p>
-        <p class="felicidade">Felicidade:<span id="felicidade"></span></p>
-        <p class="energia">Energia:<span id="energia"></span></p>
-        <p class="fome">Fome:<span id="fome"></span></p>
-        <p class="inteligencia">Inteligência:<span id="inteligencia"></span></p>
-        <p class="dinheiro">Dinheiro:<span id="dinheiro"></span></p>
-        <p class="descricao">Descrição:<span id="descricao"></span></p>
+        <p class="descriptionstyle">Vida:<span class="descriptionspan" id="description-attribute-vida"></span></p> 
+        <p class="descriptionstyle">Felicidade:<span class="descriptionspan" id="description-attribute-felicidade"></span></p>
+        <p class="descriptionstyle">Energia:<span class="descriptionspan" id="description-attribute-energia"></span></p>
+        <p class="descriptionstyle">Fome:<span class="descriptionspan" id="description-attribute-fome"></span></p>
+        <p class="descriptionstyle">Inteligência:<span class="descriptionspan" id="description-attribute-inteligencia"></span></p>
+        <p class="descriptionstyle">Dinheiro:<span class="descriptionspan" id="description-attribute-dinheiro"></span></p>
+        <p class="descriptionstyle">Descrição:<span class="descriptionspan" id="description-attribute-descricao"></span></p>
 
     </div>
 
     </section>
 
 
-    <section id="nomeUsuario" style="display: none;"> <!--nomeg-->
+    <form id="nomeUsuario" style="display: none;"> <!--nomeg-->
 
-        <h1 style="text-align: center;">Digite seu nome</h1>
-        <input type="text" id="nomeG" placeholder="Digite seu nome"
-        style="text-align: center;">
-        <button id="masculino"
-        onclick="casa('Masculino')">Masculino</button>
-        <button id="feminino"
-        onclick="casa('Feminino')">Feminino</button>
+        <h1>Digite seu nome</h1>
+        <input type="text" id="nomeG" placeholder="Digite seu nome" required>
+        <button type="submit" id="masculino" onclick="casa('Masculino')">Masculino</button>
+        <button type="submit" id="feminino" onclick="casa('Feminino')">Feminino</button>
 
-    </section>
+    </form>
 
 
     <section id="cidade" style="display: none;">  <!--era barraco-->
         
-        
-        <div style="text-align: center;">
-    
+        <div>
             <button onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->
-            <button onclick="cozinha()">Cozinha</button> <!--era cozinha-->
-            <button onclick="mercado()">mercado</button> <!--era sala-->
-            <button onclick="festa()">Festa</button><!--estudo-->
-            <button onclick="quarto()">Quarto</button> <!--quarto-->
+            <button onclick="cozinha()">Cozinha</button>     <!--era cozinha-->
+            <button onclick="mercado()">mercado</button>     <!--era sala-->
+            <button onclick="festa()">Festa</button>         <!--estudo-->
+            <button onclick="quarto()">Quarto</button>       <!--quarto-->
             <button onclick="banheiro()">Banheiro</button>   <!-- era banheiro -->
-
         </div>
     </section>
 
@@ -106,7 +97,6 @@
 
     <section id="trabalho" style="display:none;">
 
-
        <h1 class="textoGrande">Oções de trabalho</h1>
        <button onclick="voltar()">Voltar</button>
        <button id="vendas" onclick="trabalho1()">Vendas</button>
@@ -116,13 +106,12 @@
     </section>
 
     <button id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
-
     <button id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
 
 
     <section id="perfil" style="display: none;">
 
-            <h2 style="text-align: center;">Perfil do Personagem</h2>
+            <h2>Perfil do Personagem</h2>
             <p id="nomePerfil"></p>
             <p id="generoPerfil"></p>
             <p id="perfilVida"></p>
