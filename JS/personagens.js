@@ -89,9 +89,6 @@ function telap(personagem) {
         document.getElementById("nomeUsuario").style.display = "none";
         document.getElementById("perfilButton").style.display = "inline";
         }
-
-
-     
     
             function atualizarPerfil(personagem) {
                 document.getElementById("perfilVida").innerText = "Vida: "
@@ -107,18 +104,9 @@ function telap(personagem) {
                 document.getElementById("perfilSaude").innerText = "Saude: " + personagem.saude;
         }
 
-        function mercado(){
+       
 
-            document.getElementById("market").style.display = "block";
-            document.getElementById("cidade").style.display = "none";
-            document.getElementById("telaP").style.display = "none";
-            document.getElementById("nomeUsuario").style.display = "none"; //nomeg
 
-            mostrarPerfil();
-
-    }
-
-    
 
         
 
