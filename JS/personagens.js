@@ -53,13 +53,13 @@ let generoPersonagem;
 let personagemSelecionado;
 
 function telap(personagem) {
-    document.getElementById("description-attribute-vida").innerHTML = personagem.vida;
-    document.getElementById("description-attribute-felicidade").innerHTML = personagem.felicidade;
-    document.getElementById("description-attribute-fome").innerHTML = personagem.fome;
-    document.getElementById("description-attribute-inteligencia").innerHTML = personagem.inteligencia;
-    document.getElementById("description-attribute-energia").innerHTML = personagem.energia;
-    document.getElementById("description-attribute-dinheiro").innerHTML = personagem.dinheiro;
-    document.getElementById("description-attribute-descricao").innerHTML = personagem.descricao;
+    document.getElementById("vida").innerHTML = personagem.vida;
+    document.getElementById("felicidade").innerHTML = personagem.felicidade;
+    document.getElementById("fome").innerHTML = personagem.fome;
+    document.getElementById("inteligencia").innerHTML = personagem.inteligencia;
+    document.getElementById("energia").innerHTML = personagem.energia;
+    document.getElementById("dinheiro").innerHTML = personagem.dinheiro;
+    document.getElementById("descricao").innerHTML = personagem.descricao;
 
 
 
@@ -91,8 +91,7 @@ function telap(personagem) {
         }
     
             function atualizarPerfil(personagem) {
-                document.getElementById("perfilVida").innerText = "Vida: "
-                + personagem.vida;
+                document.getElementById("perfilVida").innerText = "Vida: " + personagem.vida;
                 document.getElementById("perfilEnergia").innerText = "Energia: " + personagem.energia;
                 document.getElementById("perfilFelicidade").innerText =
                 "Felicidade: " + personagem.felicidade;
@@ -103,3 +102,12 @@ function telap(personagem) {
                 "Dinheiro: " + personagem.dinheiro;
                 document.getElementById("perfilSaude").innerText = "Saude: " + personagem.saude;
         }
+
+       
+
+
+
+        
+
+      
+        
