@@ -1,0 +1,62 @@
+.characters {
+    display: flex;
+    justify-content: center;
+}
+
+.chr {
+    position: absolute;
+}
+
+.chr:hover {
+    cursor: pointer;
+}
+
+.chr.-co {
+    top: 320px;
+    left: 16%;
+    transition: 0.5s;
+}
+
+.chr.-co:hover {
+    background-image: url(/assets/personagens/cozinheiraSelecionada.png);
+    
+    -webkit-transform: rotate(-15deg) scale(1.2) translateY(-20px);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.chr.-pr {
+    top: 320px;
+    left: 31%;
+    transition: 0.5s;
+}
+
+.chr.-pr:hover {
+    -webkit-transform: rotate(-15deg) scale(1.2) translateY(-20px);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.chr.-pa {
+    top: 320px;
+    left: 50%;
+    transition: 0.5s;
+}
+
+.chr.-pa:hover {
+    -webkit-transform: rotate(-15deg) scale(1.2) translateY(-20px);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.chr.-at {
+    top: 320px;
+    left: 64%;
+    transition: 0.5s;
+}
+
+.chr.-at:hover {
+    -webkit-transform: rotate(-15deg) scale(1.2) translateY(-20px);
+    transition: 0.5s;
+    z-index: 1;
+}

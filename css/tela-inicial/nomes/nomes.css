@@ -1,0 +1,7 @@
+.nomes {
+    font-family: 'Dhurjati', sans-serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: var(--color-second);
+}

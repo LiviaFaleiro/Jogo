@@ -18,6 +18,7 @@ body {
     border-radius: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
+    z-index: 2;
 }
 
 .parametros {
