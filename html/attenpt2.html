@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>  
 <html lang="en">
 <head>
@@ -10,28 +9,29 @@
 </head>
 <body>
     <section id="telaP">
-        <!-- HUD 1 -->
         <ul>
-            <li><a href="#" onmouseover="telaP(Programadora)" onclick="selecionarPersonagem(Programadora)">Programador</a></li>
-            <li><a href="#" onmouseover="telaP(Atriz)" onclick="selecionarPersonagem(Atriz)">Atriz</a></li>
-            <li><a href="#" onmouseover="telaP(Cozinheira)" onclick="selecionarPersonagem(Cozinheira)">Cozinheira</a></li>
-            <li><a href="#" onmouseover="telaP(Paleontologa)" onclick="selecionarPersonagem(Paleontologa)">Paleontologa</a></li>
+        <li><a href="#" onmouseover="telap(Programadora)"
+        onclick="nome()">Programadora</a></li>
+        <li><a href="#" onmouseover="telap(Atriz)"
+        onclick="nome()">Atriz</a></li>
+        <li><a href="#" onmouseover="telap(Cozinheira)"
+        onclick="nome()">Cozinheira</a></li>
+        <li><a href="#" onmouseover="telap(Paleontologa)"
+        onclick="nome()">Paleontologa</a></li>
         </ul>
         <div>
-            <ul>
-                <li>Descrição: <span id="descricao"></span></li>
-                <li>Vida: <span id="vida"></span></li>
-                <li>Energia: <span id="energia"></span></li>
-                <li>Felicidade: <span id="felicidade"></span></li>
-                <li>Fome: <span id="fome"></span></li>
-                <li>Saúde: <span id="saude"></span></li>
-                <li>Inteligência: <span id="inteligencia"></span></li>
-                <img id="foto" />
-                
-            </ul>
-        </div>
-    </section>
+        <ul>
+        <li>Descrição: <span id="descricao"></span></li>
+        <li>Vida: <span id="vida"></span></li>
+        <li>Energia:<span id="energia"></span></li>
+        <li>Felicidade: <span id="felicidade"></span></li>
+        <li>Fome: <span id="fome"></span></li>
+        <li>Saúde: <span id="saude"></span></li>
+        <li>Inteligência: <span id="inteligencia"></span></li>
+        </ul>
 
+        </div>
+        </section>
     <section id="nomeg" style="display: none;">
         <!-- HUD  2 --> 
         <h1 style="text-align: center;">Digite seu nome</h1>
@@ -44,6 +44,7 @@
         <!-- Adicione este botão para avançar para o próximo HUD -->
         <button id="avancarParaJogo" onclick="avancarParaJogo()">Avançar para o Jogo</button>
     </section>
+
 
     <section id="telaJogo" style="display: none">
         <!-- HUD 3 -->
@@ -105,21 +106,22 @@
         <button onclick="voltarParaMenu()">Voltar para o Menu</button>
     </section>
 
-    <!-- Adicione a barra de status -->
-    <section id="barraStatus" style="display: none;">
-        <h2>Status do Personagem:</h2>
-        <p>Gênero: <span id="genero"></span></p>
-        <p>Nome: <span id="nomeUsuario"></span></p>
-        <p>Vida: <span id="statusVida"></span></p>
-        <p>Energia: <span id="statusEnergia"></span></p>
-        <p>Felicidade: <span id="statusFelicidade"></span></p>
-        <p>Fome: <span id="statusFome"></span></p>
-        <p>Saúde: <span id="statusSaude"></span></p>
-        <p>Inteligência: <span id="statusInteligencia"></span></p>
-        <p>Dinheiro: <span id="statusDinheiro"></span></p>
-    </section>
+    <!--barra de status -->
+  
+    <section id="perfil" style="display: none;">
+        <h2 style="text-align: center;">Perfil do Personagem</h2>
+        <p id="nomePerfil"></p>
+        <p id="generoPerfil"></p>
+        <p id="perfilVida"></p>
+        <p id="perfilEnergia"></p>
+        <p id="perfilFelicidade"></p>
+        <p id="perfilFome"></p>
+        <p id="perfilSaude"></p>
+        <p id="perfilInteligencia"></p>
+        <p id="perfilDinheiro"></p>
+        </section>
 
-    <script src="tentativa2.js"></script>      
+    <script src="JS\tentativa2.js"></script>      
     
 </body>
 </html>
