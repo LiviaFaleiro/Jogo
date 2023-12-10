@@ -16,7 +16,11 @@
 </head>
 <body>
 
+
     <section id="telaP"> <!--transformar em uma section-->
+
+    <div class="characters">
+
         <div class="chr -co">
             <p class="nomes">Cozinheira</p>
         <img class="Cozinheira"  href="#" onmouseover="telap(cozinheira)" onclick="nome()"src="/assets/personagens/cozinheira.png" alt="Cozinheira" width="230px"></div>
@@ -26,9 +30,12 @@
         <img class="Programadora"  href="#" onmouseover="telap(programadora)" onclick="nome()" src="/assets/personagens/programadora.png" alt="Programadora" width="320px"></div>
 
         <div class="chr -pa">
+
             <p class="nomes">Paleontologa</p>
+
         <img class="Paleontologa" href="#" onmouseover="telap(paleontologa)" onclick="nome()" src="/assets/personagens/paleontologa.png" alt="Paleontologa" width="230px"></div>
         
+
         <div class="chr -at">
             <p class="nomes">Atriz</p>
         <img class="Atriz"  href="#" onmouseover="telap(atriz)" onclick="nome()" src="/assets/personagens/atriz.png" alt="Atriz" width="320px"></div>
@@ -87,6 +94,17 @@
 
     </section>
 
+
+    <section id="festar" style="display: none;">
+
+        <button onclick="voltar()">Voltar</button>
+        <button onclick="dancar()">Dançar</button>
+        <button onclick="beber()">beber</button>
+
+    </section>
+
+    
+
     <button id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
 
     <button id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
@@ -108,13 +126,7 @@
     </section>
 
 
-    <section id="festar" style="display: none;">
 
-        <button onclick="voltar()">Voltar</button>
-        <button onclick="dancar()">Dançar</button>
-        <button onclick="beber()">beber</button>
-
-    </section>
 
     <script src="/JS/personagens.js"></script>  
     <script src="/JS/botaoPerfil.js"></script>   

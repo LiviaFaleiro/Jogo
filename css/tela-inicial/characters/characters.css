@@ -18,11 +18,8 @@
 }
 
 .chr.-co:hover {
-    background-image: url(/assets/personagens/cozinheiraSelecionada.png);
-    
     -webkit-transform: rotate(-15deg) scale(1.2) translateY(-20px);
     transition: 0.5s;
-    z-index: 1;
 }
 
 .chr.-pr {
