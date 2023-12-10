@@ -16,32 +16,108 @@
 </head>
 <body>
 
-    <div class="characters">
+    <section id="telaP"> <!--transformar em uma section-->
         <div class="chr -co">
             <p class="nomes">Cozinheira</p>
-        <img class="Cozinheira" src="/assets/personagens/cozinheira.png" alt="Cozinheira" width="230px"></div>
+        <img class="Cozinheira"  href="#" onmouseover="telap(cozinheira)" onclick="nome()"src="/assets/personagens/cozinheira.png" alt="Cozinheira" width="230px"></div>
 
         <div class="chr -pr">
             <p class="nomes">Programadora</p>
-        <img class="Programadora" src="/assets/personagens/programadora.png" alt="Programadora" width="320px"></div>
+        <img class="Programadora"  href="#" onmouseover="telap(programadora)" onclick="nome()" src="/assets/personagens/programadora.png" alt="Programadora" width="320px"></div>
 
         <div class="chr -pa">
             <p class="nomes">Paleontologa</p>
-        <img class="Paleontologa" src="/assets/personagens/paleontologa.png" alt="Paleontologa" width="230px"></div>
+        <img class="Paleontologa" href="#" onmouseover="telap(paleontologa)" onclick="nome()" src="/assets/personagens/paleontologa.png" alt="Paleontologa" width="230px"></div>
         
         <div class="chr -at">
             <p class="nomes">Atriz</p>
-        <img class="Atriz" src="/assets/personagens/atriz.png" alt="Atriz" width="320px"></div>
-    </div>
+        <img class="Atriz"  href="#" onmouseover="telap(atriz)" onclick="nome()" src="/assets/personagens/atriz.png" alt="Atriz" width="320px"></div>
+    
 
     <div class="characteristics">
-        <p class="parametros">Vida:</p>
-        <p class="parametros">Descrição:</p>
-        <p class="parametros">Dinheiro:</p>
-        <p class="parametros">Felicidade:</p>
-        <p class="parametros">Energia:</p>
-        <p class="parametros">Fome:</p>
-        <p class="parametros">Inteligência:</p>
+
+        <p class="vida">Vida:<span id="vida"></span></p>
+        <p class="felicidade">Felicidade:<span id="felicidade"></span></p>
+        <p class="energia">Energia:<span id="energia"></span></p>
+        <p class="fome">Fome:<span id="fome"></span></p>
+        <p class="inteligencia">Inteligência:<span id="inteligencia"></span></p>
+        <p class="dinheiro">Dinheiro:<span id="dinheiro"></span></p>
+        <p class="descricao">Descrição:<span id="descricao"></span></p>
+
     </div>
+
+    </section>
+
+
+    <section id="nomeUsuario" style="display: none;"> <!--nomeg-->
+
+        <h1 style="text-align: center;">Digite seu nome</h1>
+        <input type="text" id="nomeG" placeholder="Digite seu nome"
+        style="text-align: center;">
+        <button id="masculino"
+        onclick="casa('Masculino')">Masculino</button>
+        <button id="feminino"
+        onclick="casa('Feminino')">Feminino</button>
+
+    </section>
+
+
+    <section id="cidade" style="display: none;">  <!--era barraco-->
+        
+        
+        <div style="text-align: center;">
+    
+            <button onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->
+            <button onclick="cozinha()">Cozinha</button> <!--era cozinha-->
+            <button onclick="mercado()">mercado</button> <!--era sala-->
+            <button onclick="festa()">Festa</button><!--estudo-->
+            <button onclick="quarto()">Quarto</button> <!--quarto-->
+            <button onclick="banheiro()">Banheiro</button>   <!-- era banheiro -->
+
+        </div>
+    </section>
+
+    <section id="market" style="display: none;"> <!--era sala-->
+
+        <h1 class="textoGrande">O que deseja comprar</h1>
+        <button onclick="voltar()">Voltar</button>
+        <button id="hamburguer" onclick="comida1()"> Hamburguer</button>
+        <button id="salada" onclick = "comida2()">Salada</button>
+        <button id="bolo" onclick = "comida3()">Bolo</button>
+
+    </section>
+
+    <button id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
+
+    <button id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
+
+
+    <section id="perfil" style="display: none;">
+
+            <h2 style="text-align: center;">Perfil do Personagem</h2>
+            <p id="nomePerfil"></p>
+            <p id="generoPerfil"></p>
+            <p id="perfilVida"></p>
+            <p id="perfilEnergia"></p>
+            <P id="perfilSujo"></P>
+            <p id="perfilFelicidade"></p>
+            <p id="perfilFome"></p>
+            <p id="perfilInteligencia"></p>
+            <p id="perfilDinheiro"></p>
+
+    </section>
+
+
+    <section id="festar" style="display: none;">
+
+        <button onclick="voltar()">Voltar</button>
+        <button onclick="dancar()">Dançar</button>
+        <button onclick="beber()">beber</button>
+
+    </section>
+
+    <script src="/JS/personagens.js"></script>  
+    <script src="/JS/botaoPerfil.js"></script>   
+    <script src="/JS/funcaoLugares.js"></script>
 </body>
 </html>

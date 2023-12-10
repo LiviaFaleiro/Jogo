@@ -6,7 +6,7 @@ const personagem = function(){
     this.inteligencia = 0;
     this.energia = 100;
     this.dinheiro = 10000;
-    this.discrição = "Alguma coisa";
+    this.descricao = "Alguma coisa";
     }
 
     let programadora = new personagem();
@@ -17,7 +17,7 @@ const personagem = function(){
     programadora.inteligencia = 0;
     programadora.energia = 100;
     programadora.dinheiro = 50;
-    programadora.discrição = "Ele paga menos por remedios";
+    programadora.descricao = "Ele paga menos por remedios";
 
     let atriz = new personagem();
 
@@ -27,7 +27,7 @@ const personagem = function(){
     atriz.inteligencia = 0;
     atriz.energia = 100;
     atriz.dinheiro = 50;
-    atriz.discrição = "Ele perde menos energia quando vai trabalhar";
+    atriz.descricao = "Ele perde menos energia quando vai trabalhar";
 
     let cozinheira = new personagem();
     cozinheira.vida = 100;
@@ -36,7 +36,7 @@ const personagem = function(){
     cozinheira.inteligencia = 0;
     cozinheira.energia = 100;
     cozinheira.dinheiro = 50;
-    cozinheira.discrição = "Ele ganha mais pontos de fome ao comer";
+    cozinheira.descricao = "Ele ganha mais pontos de fome ao comer";
 
     let paleontologa = new personagem();
 
@@ -46,7 +46,7 @@ const personagem = function(){
     paleontologa.inteligencia = 10;
     paleontologa.energia = 100;
     paleontologa.dinheiro = 30;
-    paleontologa.discrição = "Ele aprende mais rapido";
+    paleontologa.descricao = "Ele aprende mais rapido";
 
 let nomePersonagem;
 let generoPersonagem;
@@ -58,12 +58,15 @@ function telap(personagem) {
     document.getElementById("fome").innerHTML = personagem.fome;
     document.getElementById("inteligencia").innerHTML = personagem.inteligencia;
     document.getElementById("energia").innerHTML = personagem.energia;
-    document.getElementById("discrição").innerHTML = personagem.discrição;
+    document.getElementById("dinheiro").innerHTML = personagem.dinheiro;
+    document.getElementById("descricao").innerHTML = personagem.descricao;
+
+
+
     document.getElementById("perfilVida").innerText = "Vida: " + personagem.vida;
     document.getElementById("perfilEnergia").innerText = "Energia: " + personagem.energia;
     document.getElementById("perfilFelicidade").innerText = "Felicidade: " + personagem.felicidade;
     document.getElementById("perfilFome").innerText = "Fome: " + personagem.fome;
-
     document.getElementById("perfilInteligencia").innerText = "Inteligência: " + personagem.inteligencia;
     document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + personagem.dinheiro;
     
@@ -73,8 +76,9 @@ function telap(personagem) {
 }
     function nome(){
 
-        document.getElementById("nomeg").style.display = "block";
+        document.getElementById("nomeUsuario").style.display = "block";
         document.getElementById("telaP").style.display = "none";
+
         }
     
         function casa(genero) {
@@ -82,7 +86,7 @@ function telap(personagem) {
         generoPersonagem = genero;
         document.getElementById("cidade").style.display = "block";
         document.getElementById("telaP").style.display = "none";
-        document.getElementById("nomeg").style.display = "none";
+        document.getElementById("nomeUsuario").style.display = "none";
         document.getElementById("perfilButton").style.display = "inline";
         }
 
@@ -108,11 +112,13 @@ function telap(personagem) {
             document.getElementById("market").style.display = "block";
             document.getElementById("cidade").style.display = "none";
             document.getElementById("telaP").style.display = "none";
-            document.getElementById("nomeg").style.display = "none";
+            document.getElementById("nomeUsuario").style.display = "none"; //nomeg
 
             mostrarPerfil();
-            
-            }
+
+    }
+
+    
 
         
 
