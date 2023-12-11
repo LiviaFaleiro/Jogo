@@ -74,6 +74,7 @@ function telap(personagem) {
 }
     function nome(){
 
+        document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)";
         document.getElementById("nomeUsuario").style.display = "block"; //era nomeg
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "flex";
