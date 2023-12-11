@@ -53,6 +53,7 @@ let generoPersonagem;
 let personagemSelecionado;
 
 function telap(personagem) {
+
     document.getElementById("description-attribute-vida").innerHTML = personagem.vida;
     document.getElementById("description-attribute-felicidade").innerHTML = personagem.felicidade;
     document.getElementById("description-attribute-fome").innerHTML = personagem.fome;
@@ -75,7 +76,7 @@ function telap(personagem) {
 }
     function nome(){
 
-        document.getElementById("nomeUsuario").style.display = "block";
+        document.getElementById("nomeUsuario").style.display = "block"; //era nomeg
         document.getElementById("telaP").style.display = "none";
 
         }
@@ -90,14 +91,12 @@ function telap(personagem) {
         }
     
             function atualizarPerfil(personagem) {
+                
                 document.getElementById("perfilVida").innerText = "Vida: " + personagem.vida;
                 document.getElementById("perfilEnergia").innerText = "Energia: " + personagem.energia;
-                document.getElementById("perfilFelicidade").innerText =
-                "Felicidade: " + personagem.felicidade;
+                document.getElementById("perfilFelicidade").innerText = "Felicidade: " + personagem.felicidade;
                 document.getElementById("perfilFome").innerText = "Fome: " + personagem.fome;
-                document.getElementById("perfilInteligencia").innerText =
-                "Inteligência: " + personagem.inteligencia;
-                document.getElementById("perfilDinheiro").innerText =
-                "Dinheiro: " + personagem.dinheiro;
+                document.getElementById("perfilInteligencia").innerText = "Inteligência: " + personagem.inteligencia;
+                document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + personagem.dinheiro;
                 document.getElementById("perfilSaude").innerText = "Saude: " + personagem.saude;
         }

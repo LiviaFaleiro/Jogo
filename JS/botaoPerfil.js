@@ -1,9 +1,9 @@
 function esconderBotaoPerfil() {
-    document.getElementById("perfilButton").style.display =
-    "none";
+    document.getElementById("perfilButton").style.display = "none";
 }
 
 function mostrarPerfil() {
+    
     document.getElementById("perfil").style.display = "block";
     document.getElementById("nomePerfil").innerText = "Nome: " + nomePersonagem;
     document.getElementById("generoPerfil").innerText = "Gênero: " + generoPersonagem;
