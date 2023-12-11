@@ -4,6 +4,7 @@
 }
 
 .button{
+    
     display: block;
     width: 200px;
     height: 40px;
@@ -17,9 +18,11 @@
     text-align: center;
     position: relative;
     transition: all .35s;
+    cursor: pointer;
 }
 
 .button span{
+    font-weight: bold;
     position: relative;
     z-index: 2;
   }
@@ -31,12 +34,12 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: #ff92ed;
+    background: #ffee00;
     transition: all .35s;
 }
   
 .button:hover{
-    color: #fff;
+    color: #000000;
 }
   
 .button:hover:after{
