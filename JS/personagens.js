@@ -61,8 +61,6 @@ function telap(personagem) {
     document.getElementById("description-attribute-energia").innerHTML = personagem.energia;
     document.getElementById("description-attribute-dinheiro").innerHTML = personagem.dinheiro;
     document.getElementById("description-attribute-descricao").innerHTML = personagem.descricao;
-
-    
     document.getElementById("perfilVida").innerText = "Vida: " + personagem.vida;
     document.getElementById("perfilEnergia").innerText = "Energia: " + personagem.energia;
     document.getElementById("perfilFelicidade").innerText = "Felicidade: " + personagem.felicidade;
@@ -80,6 +78,7 @@ function telap(personagem) {
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "flex";
         document.querySelector("#column").style.display = "flex"
+        
         }
     
         function casa(genero) {
