@@ -78,7 +78,8 @@ function telap(personagem) {
 
         document.getElementById("nomeUsuario").style.display = "block"; //era nomeg
         document.getElementById("telaP").style.display = "none";
-
+        document.getElementById("nomeUsuario").style.display = "flex";
+        document.querySelector("#column").style.display = "flex"
         }
     
         function casa(genero) {
