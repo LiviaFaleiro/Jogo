@@ -76,9 +76,9 @@ function telap(personagem) {
 }
     function nome(){
 
-        document.getElementById("nomeUsuario").style.display = "block";
         document.getElementById("telaP").style.display = "none";
-
+        document.getElementById("nomeUsuario").style.display = "flex";
+        document.querySelector("#column").style.display = "flex"
         }
     
         function casa(genero) {
