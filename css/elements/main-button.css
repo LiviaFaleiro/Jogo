@@ -1,9 +1,6 @@
 .wrapper {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
+    justify-content: space-around;
 }
 
 a{
@@ -34,7 +31,7 @@ a:after{
     left: 0;
     width: 0;
     height: 100%;
-    background: #ff003b;
+    background: #ff92ed;
     transition: all .35s;
 }
   
