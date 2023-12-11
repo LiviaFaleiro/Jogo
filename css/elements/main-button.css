@@ -3,7 +3,7 @@
     justify-content: space-around;
 }
 
-a{
+.button{
     display: block;
     width: 200px;
     height: 40px;
@@ -19,12 +19,12 @@ a{
     transition: all .35s;
 }
 
-a span{
+.button span{
     position: relative;
     z-index: 2;
   }
 
-a:after{
+.button:after{
     position: absolute;
     content: "";
     top: 0;
@@ -35,10 +35,10 @@ a:after{
     transition: all .35s;
 }
   
-a:hover{
+.button:hover{
     color: #fff;
 }
   
-a:hover:after{
+.button:hover:after{
     width: 100%;
 }
