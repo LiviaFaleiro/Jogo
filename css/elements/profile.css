@@ -1,4 +1,5 @@
 .profile-section {
+    position: absolute;
     background-color: var(--color-fourth);
     width: 200px;
     border-radius: 20px;

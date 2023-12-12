@@ -74,19 +74,44 @@
         </div>
 
     </form>
+    
 
+    <div class="profile-section">
 
-    <section class="main-town" id="town" style="display: none;">  <!--era barraco-->
-        
-        <div>
-            <button class="main-work" onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->   
-            <button class="main-kitchen" onclick="cozinha()">Cozinha</button>     <!--era cozinha-->
-            <button class="main-market" onclick="mercado()">mercado</button>     <!--era sala-->            <!--feito-->
-            <button class="main-party" onclick="festa()">Festa</button>         <!--estudo-->              <!--feito-->
-            <button class="main-room" onclick="casa()">casa</button>            <!--quarto-->              <!--feito-->
-            <button class="main-bathroom" onclick="banheiro()">Banheiro</button>   <!-- era banheiro -->      <!--feito-->
+        <button class="main-profile" id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
+        <button class="main-profile"  id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
+
+        <section class="profile-description" id="perfil" style="display: none;">
+            <h2>Perfil do Personagem</h2>
+            <p id="nomePerfil"></p>
+            <p id="generoPerfil"></p>
+            <p id="perfilVida"></p>
+            <p id="perfilEnergia"></p>
+            <p id="perfilFelicidade"></p>
+            <p id="perfilFome"></p>
+            <p id="perfilInteligencia"></p>
+            <p id="perfilDinheiro"></p>
+
+        </section>
+    </div>
+
+    <section class="main-town" id="town" style="display: none;">
+        <div class="main-places">
+            <div class="places-wrapper">
+                <button class="places -main-work" onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->   
+                <button class="places -main-kitchen" onclick="cozinha()">Cozinha</button>     <!--era cozinha-->
+                <button class="places -main-market" onclick="mercado()">mercado</button>     <!--era sala-->            <!--feito-->
+                <button class="places -main-party" onclick="festa()">Festa</button>         <!--estudo-->              <!--feito-->
+                <button class="places -main-room" onclick="quarto()">Quarto</button>       <!--quarto-->              <!--feito-->
+                <button class="places -main-bathroom" onclick="banheiro()">Banheiro</button>   <!-- era banheiro -->      <!--feito-->
+            </div>
+            
         </div>
+        <figure class="img-narradora">
+            <img src="/assets/personagens/narradora.png" alt="narradora">
+        </figure>
     </section>
+    
 
     <section id="market" style="display: none;"> <!--era sala-->
 
