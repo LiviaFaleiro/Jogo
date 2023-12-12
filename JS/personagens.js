@@ -52,16 +52,16 @@ let nomePersonagem;
 let generoPersonagem;
 let personagemSelecionado;
 
-function vida(){
+// function vida(){
 
-    const intervalID = setInterval(alteraPersonagem, 10000);
+//     const intervalID = setInterval(alteraPersonagem, 10000);
 
-            function alteraPersonagem() {
-                personagemSelecionado.energia-=1;
-                atualizarPerfil(personagemSelecionado);
-            }
+//             function alteraPersonagem() {
+//                 personagemSelecionado.energia-=1;
+//                 atualizarPerfil(personagemSelecionado);
+//             }
 
-        }
+//         }
     
 function capitalismo(){
 
