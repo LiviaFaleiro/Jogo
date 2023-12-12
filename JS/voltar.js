@@ -1,7 +1,7 @@
 
 function voltar(){
 
-    document.getElementById("cidade").style.display = "block";
+    document.getElementById("town").style.display = "block";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none";
     document.getElementById("trabalho").style.display = "none";
