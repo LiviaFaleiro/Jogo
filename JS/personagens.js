@@ -130,7 +130,7 @@ function telap(personagem) { //tela Perfil
                 document.getElementById("perfilInteligencia").innerText = "Inteligência: " + personagem.inteligencia;
                 document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + personagem.dinheiro;
                 
-                if(personagemSelecionado.energia <=0 || personagemsalecionado.felicidade <=0){
+                if(personagemSelecionado.energia <=0 || personagemSelecionado.felicidade <=0){
 
                           document.location = "https://www.orkut.com/index_pt.html"
                            alert("Você morreu igual o Orkut")
