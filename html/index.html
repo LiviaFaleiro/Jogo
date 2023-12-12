@@ -76,15 +76,15 @@
     </form>
 
 
-    <section id="town" style="display: none;">  <!--era barraco-->
+    <section class="main-town" id="town" style="display: none;">  <!--era barraco-->
         
         <div>
-            <button onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->   
-            <button onclick="cozinha()">Cozinha</button>     <!--era cozinha-->
-            <button onclick="mercado()">mercado</button>     <!--era sala-->            <!--feito-->
-            <button onclick="festa()">Festa</button>         <!--estudo-->              <!--feito-->
-            <button onclick="quarto()">Quarto</button>       <!--quarto-->              <!--feito-->
-            <button onclick="banheiro()">Banheiro</button>   <!-- era banheiro -->      <!--feito-->
+            <button class="main-work" onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->   
+            <button class="main-kitchen" onclick="cozinha()">Cozinha</button>     <!--era cozinha-->
+            <button class="main-market" onclick="mercado()">mercado</button>     <!--era sala-->            <!--feito-->
+            <button class="main-party" onclick="festa()">Festa</button>         <!--estudo-->              <!--feito-->
+            <button class="main-room" onclick="quarto()">Quarto</button>       <!--quarto-->              <!--feito-->
+            <button class="main-bathroom" onclick="banheiro()">Banheiro</button>   <!-- era banheiro -->      <!--feito-->
         </div>
     </section>
 
@@ -121,14 +121,12 @@
 
     <section id="quartinho" style="display: none;">
 
-
          <button onclick="mimir()">Dormir</button>
          <button onclick="voltar()">Voltar</button>
 
     </section>
 
     <section id="Banheiroo" style="display: none;">
-
 
         <button onclick="banhar()">Tomar Banho</button>
         <button onclick="escovar()">Escovar os dentes</button>
@@ -137,14 +135,12 @@
     </section>
 
 
-    <!-- inicio botao perfil-->
+    <div class="profile-section">
 
-    <button id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
-    <button id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
+        <button class="main-profile" id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
+        <button class="main-profile"  id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
 
-
-    <section id="perfil" style="display: none;">
-
+        <section class="profile-description" id="perfil" style="display: none;">
             <h2>Perfil do Personagem</h2>
             <p id="nomePerfil"></p>
             <p id="generoPerfil"></p>
@@ -155,7 +151,8 @@
             <p id="perfilInteligencia"></p>
             <p id="perfilDinheiro"></p>
 
-    </section>
+        </section>
+    </div>
 
 
 <!--fim botao perfil-->
@@ -164,6 +161,6 @@
     <script src="/JS/botaoPerfil.js"></script>   
     <script src="/JS/funcaoLugares.js"></script>
     <script src="/JS/voltar.js"></script>
-    ,<script src="/JS/npc.js"></script>
+    <script src="/JS/npc.js"></script>
 </body>
 </html>

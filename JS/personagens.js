@@ -115,7 +115,7 @@ function telap(personagem) { //tela Perfil
         function gen(genero) {
         nomePersonagem = document.getElementById("nomeG").value;
         generoPersonagem = genero;
-        document.getElementById("town").style.display = "block";
+        document.getElementById("town").style.display = "flex";
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "none";
         document.getElementById("perfilButton").style.display = "inline";
