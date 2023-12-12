@@ -104,7 +104,7 @@ function telap(personagem) { //tela Perfil
 }
     function nome(){
 
-        //document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)"; 
+        document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)"; 
         document.getElementById("nomeUsuario").style.display = "block"; //era nomeg
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "flex";
@@ -115,7 +115,7 @@ function telap(personagem) { //tela Perfil
         function gen(genero) {
         nomePersonagem = document.getElementById("nomeG").value;
         generoPersonagem = genero;
-        document.getElementById("cidade").style.display = "block";
+        document.getElementById("town").style.display = "block";
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "none";
         document.getElementById("perfilButton").style.display = "inline";

@@ -4,7 +4,7 @@ function festa(){
 
    
     document.getElementById("festar").style.display = "block";
-    document.getElementById("cidade").style.display = "none";
+    document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none";
 
@@ -15,7 +15,7 @@ function festa(){
     function mercado(){
 
         document.getElementById("market").style.display = "block";
-        document.getElementById("cidade").style.display = "none";
+        document.getElementById("town").style.display = "none";
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "none"; //nomeg
 
@@ -90,7 +90,7 @@ let trabalhoescolhido
 function trabalhar(){
 
     document.getElementById("trabalho").style.display = "block";
-    document.getElementById("cidade").style.display = "none";
+    document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none"; //nomeg
 
@@ -103,7 +103,7 @@ function quarto(){
 
 
     document.getElementById("quartinho").style.display = "block";
-    document.getElementById("cidade").style.display = "none";
+    document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none"; //nomeg
 
@@ -130,7 +130,7 @@ atualizarPerfil(personagemSelecionado)
 function banheiro(){
 
     document.getElementById("Banheiroo").style.display = "block";
-    document.getElementById("cidade").style.display = "none";
+    document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none"; //nomeg
 
