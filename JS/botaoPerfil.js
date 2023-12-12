@@ -3,7 +3,6 @@ function esconderBotaoPerfil() {
 }
 
 function mostrarPerfil() {
-    
     document.getElementById("perfil").style.display = "block";
     document.getElementById("nomePerfil").innerText = "Nome: " + nomePersonagem;
     document.getElementById("generoPerfil").innerText = "Gênero: " + generoPersonagem;
@@ -20,6 +19,5 @@ function mostrarPerfil() {
 
 function esconderPerfil() {
     document.getElementById("perfil").style.display = "none";
-    }
-
+}
     
