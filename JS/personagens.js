@@ -52,7 +52,36 @@ let nomePersonagem;
 let generoPersonagem;
 let personagemSelecionado;
 
+function vida(){
+
+    const intervalID = setInterval(alteraPersonagem, 10000);
+
+            function alteraPersonagem() {
+                personagemSelecionado.energia-=1;
+                atualizarPerfil(personagemSelecionado);
+            }
+
+        }
+    
+function capitalismo(){
+
+  const IntervalID = setInterval(alteraPersonagem, 30000)
+
+             function alteraPersonagem(){
+
+                     personagemSelecionado.felicidade-=5
+                     atualizarPerfil(personagemSelecionado)
+                     alert("O capitalismo suga nossa alegria, perdeu 5 de felicidade")
+              
+
+             }
+}
+
+
 function telap(personagem) { //tela Perfil
+
+    
+
 
     document.getElementById("description-attribute-vida").innerHTML = personagem.vida;
     document.getElementById("description-attribute-felicidade").innerHTML = personagem.felicidade;
@@ -69,12 +98,13 @@ function telap(personagem) { //tela Perfil
     document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + personagem.dinheiro;
     
     personagemSelecionado = personagem;
-    atualizarPerfil();
+    vida()
+    capitalismo()
         
 }
     function nome(){
 
-        document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)"; 
+        //document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)"; 
         document.getElementById("nomeUsuario").style.display = "block"; //era nomeg
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "flex";
@@ -99,5 +129,11 @@ function telap(personagem) { //tela Perfil
                 document.getElementById("perfilFome").innerText = "Fome: " + personagem.fome;
                 document.getElementById("perfilInteligencia").innerText = "Inteligência: " + personagem.inteligencia;
                 document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + personagem.dinheiro;
-                document.getElementById("perfilSaude").innerText = "Saude: " + personagem.saude;
+                
+                if(personagemSelecionado.energia <=0 || personagemsalecionado.felicidade <=0){
+
+                          document.location = "https://www.orkut.com/index_pt.html"
+                           alert("Você morreu igual o Orkut")
+
+                }
         }
