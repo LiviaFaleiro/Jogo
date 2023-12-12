@@ -6,7 +6,7 @@ function voltar(){
     document.getElementById("nomeUsuario").style.display = "none";
     document.getElementById("trabalho").style.display = "none";
    // document.getElementById("lugarComida").style.display = "none";
-   // document.getElementById("quar").style.display = "none";
+    document.getElementById("quartinho").style.display = "none";
     document.getElementById("festar").style.display = "none";
     document.getElementById("market").style.display = "none";
     //document.getElementById("ban").style.display = "none";

@@ -66,8 +66,8 @@
 
             <div class="wrapper">
             
-                    <a class="button" type="submit" id="masculino" onclick="casa('Masculino')"><span>Masculino</span></a>
-                    <a class="button" type="submit" id="feminino" onclick="casa('Feminino')"><span>Feminino</span></a>
+                    <a class="button" type="submit" id="masculino" onclick="gen('Masculino')"><span>Masculino</span></a>
+                    <a class="button" type="submit" id="feminino" onclick="gen('Feminino')"><span>Feminino</span></a>
             </div>
         </div>
 
@@ -79,9 +79,9 @@
         <div>
             <button onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->
             <button onclick="cozinha()">Cozinha</button>     <!--era cozinha-->
-            <button onclick="mercado()">mercado</button>     <!--era sala-->
-            <button onclick="festa()">Festa</button>         <!--estudo-->
-            <button onclick="quarto()">Quarto</button>       <!--quarto-->
+            <button onclick="mercado()">mercado</button>     <!--era sala-->            <!--feito-->
+            <button onclick="festa()">Festa</button>         <!--estudo-->              <!--feito-->
+            <button onclick="quarto()">Quarto</button>       <!--quarto-->              <!--feito-->
             <button onclick="banheiro()">Banheiro</button>   <!-- era banheiro -->
         </div>
     </section>
@@ -116,6 +116,27 @@
 
     </section>
 
+
+    <section id="quartinho" style="display: none;">
+
+
+         <button onclick="mimir()">Dormir</button>
+         <button onclick="voltar()">Voltar</button>
+
+    </section>
+
+    <section id="Banheiroo" style="display: none;">
+
+
+        <button onclick="banhar()">Tomar Banho</button>
+        <button onclick="escovar()">Escovar os dentes</button>
+        <button onclick="rosto()">Lavar o Rosto</button>
+
+    </section>
+
+
+    <!-- inicio botao perfil-->
+
     <button id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
     <button id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
 
@@ -136,7 +157,7 @@
     </section>
 
 
-
+<!--fim botao perfil-->
 
     <script src="/JS/personagens.js"></script>  
     <script src="/JS/botaoPerfil.js"></script>   

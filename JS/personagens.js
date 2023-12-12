@@ -11,48 +11,48 @@ const personagem = function(){
 
     let programadora = new personagem();
 
-    programadora.vida = 100;
-    programadora.felicidade = 100;
-    programadora.fome = 100;
-    programadora.inteligencia = 0;
-    programadora.energia = 100;
-    programadora.dinheiro = 50;
-    programadora.descricao = "Ele paga menos por remedios";
+    programadora.vida = 30;
+    programadora.felicidade = 20;
+    programadora.fome = 0;
+    programadora.inteligencia = 70;
+    programadora.energia = 30;
+    programadora.dinheiro = 150;
+    programadora.descricao = "Possui mais dinheiro que os outros";
 
     let atriz = new personagem();
 
-    atriz.vida = 100;
-    atriz.felicidade = 10;
-    atriz.fome = 100;
-    atriz.inteligencia = 0;
-    atriz.energia = 100;
-    atriz.dinheiro = 50;
-    atriz.descricao = "Ele perde menos energia quando vai trabalhar";
+    atriz.vida = 50;
+    atriz.felicidade = 60;
+    atriz.fome = 30;
+    atriz.inteligencia = 40;
+    atriz.energia = 70;
+    atriz.dinheiro = 60;
+    atriz.descricao = "Possui mais energia e ganha atributos de felicidade mais fácil";
 
     let cozinheira = new personagem();
-    cozinheira.vida = 100;
-    cozinheira.felicidade = 100;
-    cozinheira.fome = 100;
-    cozinheira.inteligencia = 0;
-    cozinheira.energia = 100;
-    cozinheira.dinheiro = 50;
-    cozinheira.descricao = "Ele ganha mais pontos de fome ao comer";
+    cozinheira.vida = 60;
+    cozinheira.felicidade = 75;
+    cozinheira.fome = 35;
+    cozinheira.inteligencia = 55;
+    cozinheira.energia = 65;
+    cozinheira.dinheiro = 70;
+    cozinheira.descricao = "Quando come, diminui mais a fome pois sabe cozinhar :)";
 
     let paleontologa = new personagem();
 
-    paleontologa.vida = 2;
-    paleontologa.felicidade = 100;
-    paleontologa.fome = 100;
-    paleontologa.inteligencia = 10;
-    paleontologa.energia = 100;
-    paleontologa.dinheiro = 30;
-    paleontologa.descricao = "Ele aprende mais rapido";
+    paleontologa.vida = 50;
+    paleontologa.felicidade = 80;
+    paleontologa.fome = 30;
+    paleontologa.inteligencia = 65;
+    paleontologa.energia = 65;
+    paleontologa.dinheiro = 75;
+    paleontologa.descricao = "Mais feliz. Menos chances de morrer de depressão";
 
 let nomePersonagem;
 let generoPersonagem;
 let personagemSelecionado;
 
-function telap(personagem) {
+function telap(personagem) { //tela Perfil
 
     document.getElementById("description-attribute-vida").innerHTML = personagem.vida;
     document.getElementById("description-attribute-felicidade").innerHTML = personagem.felicidade;
@@ -74,7 +74,7 @@ function telap(personagem) {
 }
     function nome(){
 
-        document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)";
+        document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)"; 
         document.getElementById("nomeUsuario").style.display = "block"; //era nomeg
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "flex";
@@ -82,7 +82,7 @@ function telap(personagem) {
         
         }
     
-        function casa(genero) {
+        function gen(genero) {
         nomePersonagem = document.getElementById("nomeG").value;
         generoPersonagem = genero;
         document.getElementById("cidade").style.display = "block";
