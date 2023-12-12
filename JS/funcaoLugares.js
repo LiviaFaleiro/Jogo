@@ -194,9 +194,10 @@ function rosto(){
         else{
 
                  alert("Lavastes o rosto mas perdeu 2 de energia")
-                 personagemSelecionado.energia+=2
+                 personagemSelecionado.energia-=2
 
         }
        }
 atualizarPerfil(personagemSelecionado)
 }
+

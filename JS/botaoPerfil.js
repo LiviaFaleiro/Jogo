@@ -21,3 +21,5 @@ function mostrarPerfil() {
 function esconderPerfil() {
     document.getElementById("perfil").style.display = "none";
     }
+
+    
