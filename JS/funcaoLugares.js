@@ -63,6 +63,7 @@ atualizarPerfil(personagemSelecionado)
 
 function banheiro(){
 
+    document.getElementById("dentroCasa").style.display = "none";
     document.getElementById("Banheiroo").style.display = "block";
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";

@@ -18,8 +18,6 @@ function voltarCasa(){
 
    
     document.getElementById("dentroCasa").display = "block";
-    document.getElementById("quartinho").style.display = "none";
-    document.getElementById("Banheiroo").style.display = "none";
 
 
 
