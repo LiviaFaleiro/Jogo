@@ -106,7 +106,6 @@
                 <button class="choices -el-4" onclick="casa()">Casa</button>       <!--quarto-->              <!--feito-->
             </div>
         </div>
-        <button class="voltar">Voltar</button>
         <figure class="img-narradora">
             <img src="/assets/personagens/narradora.png" alt="narradora">
         </figure>
@@ -124,7 +123,7 @@
                 <button id="bolo" onclick = "comida3()" class="choices -el-4">Bolo</button>
             </div>
         </div>
-
+        <button class="voltar" onclick="voltar()">Voltar</button>
     </section>
 
 
@@ -132,22 +131,22 @@
 
         <div class="main-options">
             <div class="choices-wrapper">
-                <button onclick="voltar()" class="choices -el-1">Voltar</button>
-                <button onclick="dancar()" class="choices -el-2">Dançar</button>
-                <button onclick="beber()"  class="choices -el-3">beber</button>
+                <button onclick="dancar()" class="choices -el-1">Dançar</button>
+                <button onclick="beber()"  class="choices -el-2">beber</button>
             </div>
         </div>
+    <button class="voltar" onclick="voltar()">Voltar</button>
     </section>
 
 
     <section id="trabalho" style="display:none;">
 
        <h1 class="textoGrande">Oções de trabalho</h1>
-       <button onclick="voltar()">Voltar</button>
        <button id="vendas" onclick="trabalho1()">Vendas</button>
        <button id="laboratório" onclick="trabalho2()">Laboratório</button>
        <button id="estudio" onclick="trabalho3()">Estudio</button>
 
+       <button class="voltar" onclick="voltar()">Voltar</button>
     </section>
 
     <!--dentro da função CASA-->
@@ -157,14 +156,13 @@
             <button id="coz"onclick="cozinha()">Ir para cozinha</button>
             <button id="BANHEIRO" onclick="banheiro()">Ir para o Banheiro</button>
             <button id="quarto_1" onclick="quarto()">Ir para o quarto</button>
-            <button onclick="voltar()">Voltar</button>
 
+            <button class="voltar" onclick="voltar()">Voltar</button>
 
     </section>
 
 
     <section id="cozinha" style="display: none;">
-
 
 
     </section>
@@ -173,7 +171,6 @@
 
          <button onclick="mimir()">Dormir</button>
          <button onclick="voltarCasa()">Voltar Para a Casa</button>
-
     </section>
 
 
@@ -183,7 +180,6 @@
         <button onclick="banhar()">Tomar Banho</button>
         <button onclick="escovar()">Escovar os dentes</button>
         <button onclick="rosto()">Lavar o Rosto</button>
-        
     </section>
 <!--fim de dentro da casa-->
 
