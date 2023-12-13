@@ -52,16 +52,29 @@ let nomePersonagem;
 let generoPersonagem;
 let personagemSelecionado;
 
-// function vida(){
+if(personagemSelecionado.felicidade<20){
 
-//     const intervalID = setInterval(alteraPersonagem, 10000);
+       alert("Você está muito melancólico, está perdendo 4 de alegria a cada 20 segundos")
+       function depressao(){
 
-//             function alteraPersonagem() {
-//                 personagemSelecionado.energia-=1;
-//                 atualizarPerfil(personagemSelecionado);
-//             }
+              const intervalID = setInterval(alteraPersonagem,20000)
 
-//         }
+              function alteraPersonagem(){
+
+                    personagemSelecionado.felicidade-=2
+                    atualizarPerfil(personagemSelecionado)
+              }
+       }
+}
+function vida(){
+
+    const intervalID = setInterval(alteraPersonagem, 10000);
+
+           function alteraPersonagem() {
+              personagemSelecionado.energia-=1;
+             atualizarPerfil(personagemSelecionado);
+          }
+         }
     
 function capitalismo(){
 
@@ -77,12 +90,23 @@ function capitalismo(){
              }
 }
 
+function dindin(){
+
+
+ const IntervalID = setInterval(alteraPersonagem,40000)
+
+       function alteraPersonagem(){
+
+
+            personagemSelecionado.dinheiro-=30
+            atualizarPerfil(personagemSelecionado)
+
+       }
+}
 
 function telap(personagem) { //tela Perfil
 
     
-
-
     document.getElementById("description-attribute-vida").innerHTML = personagem.vida;
     document.getElementById("description-attribute-felicidade").innerHTML = personagem.felicidade;
     document.getElementById("description-attribute-fome").innerHTML = personagem.fome;
@@ -100,12 +124,13 @@ function telap(personagem) { //tela Perfil
     personagemSelecionado = personagem;
     vida()
     capitalismo()
-        
+    dindin()
+    depressao()
 }
     function nome(){
 
         document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)"; 
-        document.getElementById("nomeUsuario").style.display = "block"; //era nomeg
+        document.getElementById("nomeUsuario").style.display = "block"; 
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "flex";
         document.querySelector("#column").style.display = "flex"
@@ -130,10 +155,11 @@ function telap(personagem) { //tela Perfil
                 document.getElementById("perfilInteligencia").innerText = "Inteligência: " + personagem.inteligencia;
                 document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + personagem.dinheiro;
                 
-                if(personagemSelecionado.energia <=0 || personagemSelecionado.felicidade <=0){
+                if(personagemSelecionado.energia <=0 || personagemSelecionado.felicidade <=0 || personagemSelecionado.vida<=0 || personagemSelecionado.energia>100){
 
                           document.location = "https://www.orkut.com/index_pt.html"
                            alert("Você morreu igual o Orkut")
 
                 }
         }
+    

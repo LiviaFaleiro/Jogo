@@ -5,6 +5,61 @@ function festa(){
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none";
+
+    if(personagemSelecionado.energia<20){
+
+
+         alert("Não tem energia para ir à festa")
+         voltar()
+
+
+    }
+    }
+
+    function dancar(){
+
+          if(personagemSelecionado){
+
+             if(personagemSelecionado == programadora){
+
+                 alert("Você estava precisando de uma diversão e de se mexer um pouco!")
+                 personagemSelecionado.felicidade+=10
+                 personagemSelecionado.fome+=5
+                 personagemSelecionado.energia-=4
+                 personagemSelecionado.vida+=5
+ 
+             }
+             if(personagemSelecionado == atriz){
+
+                 alert("Atrizes adoram uma festa!")
+                 personagemSelecionado.felicidade +=12
+                 personagemSelecionado.fome+=8
+                 personagemSelecionado.energia-=6
+                 personagemSelecionado.vida+=8
+
+             }
+             if(personagemSelecionado == cozinheira){
+
+                 alert("Você adora festas!")
+                 personagemSelecionado.felicidade-=10
+                 personagemSelecionado.fome+=6
+                 personagemSelecionado.energia+=6
+                 personagemSelecionado.vida+=6
+
+             }
+             if(personagemSelecionado == paleontologa){
+
+                alert("Você AMA festas")
+                personagemSelecionado.felicidade-=15
+                personagemSelecionado.fome+=10
+                personagemSelecionado.energia+=7
+                personagemSelecionado.vida+=6
+             }
+
+          }
+
+atualizarPerfil(personagemSelecionado)
+
     }
 
 
