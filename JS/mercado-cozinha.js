@@ -7,6 +7,7 @@ function mercado(){
 
 }
 var hamburguer1 = 0
+
 function comida1(){
 
     if(personagemSelecionado){
