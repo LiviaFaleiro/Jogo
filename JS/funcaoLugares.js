@@ -99,6 +99,69 @@ atualizarPerfil(personagemSelecionado)
         atualizarPerfil(personagemSelecionado)
     }
 
+    function bebida2(){
+
+          if(personagemSelecionado){
+
+                 if(personagemSelecionado.dinheiro>=15){
+
+                            alert("Comprou uma lata de cerveja por R$15")
+                            personagemSelecionado.dinheiro-=15
+                            personagemSelecionado.felicidade+=5
+
+                 }
+                 else{
+
+
+                             alert("Não tens dinheiro suficiente para comprar uma lata de cerveja")
+
+                 }
+          }
+atualizarPerfil(personagemSelecionado)
+    }
+
+ function bebida3(){
+
+             if(personagemSelecionado){
+
+                  if(personagemSelecionado.dinheiro>=20){
+
+                       alert("Compraste uma taça de vinho por R$20")
+                       personagemSelecionado.dinheiro-=20
+                       personagemSelecionado.felicidade+=10
+
+                  }
+                  else{
+
+                       alert("Não tens dinheiro suficiente para comprar uma taça de vinho")
+
+                  }
+
+             }
+atualizarPerfil(personagemSelecionado)
+ }
+
+ function bebida4(){
+
+          if(personagemSelecionado){
+
+               if(personagemSelecionado.dinheiro>=5){
+
+                    alert("Comprou uma garrafinha d'água por R$5")
+                    personagemSelecionado.dinheiro-=5
+                    personagemSelecionado.felicidade+=3
+
+               }
+               else{
+
+                    alert("Não tens R$5 para comprar uma garrafinha d'água") 
+
+               }
+        }
+          atualizarPerfil(personagemSelecionado)
+ }
+
+
     function mercado(){
 
         document.getElementById("tempo-jogo").style.display="block";
@@ -155,7 +218,7 @@ function banheiro(){
     document.getElementById("dentroCasa").style.display = "none";
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
-    document.getElementById("nomeUsuario").style.display = "none"; //nomeg
+    document.getElementById("nomeUsuario").style.display = "none"; 
 
 }
 function banhar(){

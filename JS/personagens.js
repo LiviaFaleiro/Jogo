@@ -64,19 +64,19 @@ function vida(){
     
 function capitalismo(){
 
-  const IntervalID = setInterval(mudapersonagem, 30000)
+  const IntervalID = setInterval(mudapersonagem, 50000)
 
              function mudapersonagem(){
 
-                     personagemSelecionado.felicidade-=5
+                     personagemSelecionado.dinheiro-=5
                      atualizarPerfil(personagemSelecionado)
               
 
-             }
+        }
 }
 
 
-function telap(personagem) { //tela Perfil
+function telap(personagem) { 
 
     
     document.getElementById("description-attribute-vida").innerHTML = personagem.vida;
@@ -127,7 +127,7 @@ function telap(personagem) { //tela Perfil
                 vida()
                 capitalismo()
                 
-                if(personagemSelecionado.energia <0 || personagemSelecionado.felicidade <0 || personagemSelecionado.vida<0 || personagemSelecionado.energia>100){
+                if(personagemSelecionado.energia <=0 || personagemSelecionado.felicidade <=0 || personagemSelecionado.vida <=0 || personagemSelecionado.energia>=100){
 
                           document.location = "https://www.orkut.com/index_pt.html"
                            alert("Você morreu igual o Orkut")
