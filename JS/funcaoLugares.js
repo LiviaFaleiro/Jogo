@@ -130,7 +130,3 @@ function rosto(){
 atualizarPerfil(personagemSelecionado)
 }
 
-
-
-
-
