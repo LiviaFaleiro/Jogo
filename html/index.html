@@ -150,14 +150,12 @@
     
     <section id="dentroCasa" style="display:none">
 
-        <div class="main-options">
-            <div class="choices-wrapper">
-                <button onclick="voltar()" class="choices -el-1">Voltar</button>
-                <button id="coz"onclick="cozinha()" class="choices -el-2">Ir para cozinha</button>
-                <button id="BANHEIRO" onclick="banheiro()" class="choices -el-3">Ir para o Banheiro</button>
-                <button id="quarto_1" onclick="quarto()" class="choices -el-4">Ir para o quarto</button>
-            </div>
-        </div>
+            <button onclick="voltar()">Voltar</button>
+            <button id="coz"onclick="cozinha()">Ir para cozinha</button>
+            <button id="BANHEIRO" onclick="banheiro()">Ir para o Banheiro</button>
+            <button id="quarto_1" onclick="quarto()">Ir para o quarto</button>
+
+
     </section>
 
 
@@ -172,15 +170,17 @@
          <button onclick="mimir()">Dormir</button>
          <button onclick="voltarCasa()">Voltar Para a Casa</button>
 
+         
+
     </section>
 
 
     <section id="Banheiroo" style="display: none;">
 
-        <button onclick="voltarCasa()">Voltar Para a Casa</button>
         <button onclick="banhar()">Tomar Banho</button>
         <button onclick="escovar()">Escovar os dentes</button>
         <button onclick="rosto()">Lavar o Rosto</button>
+        <button onclick="voltarCasa()">Voltar Para a Casa</button>
         
     </section>
 <!--fim de dentro da casa-->
@@ -214,5 +214,6 @@
     <script src="/JS/funcaoLugares.js"></script>
     <script src="/JS/voltar.js"></script>
     <script src="/JS/npc.js"></script>
+    <script src="/JS/mercado&cozinha.js"></script>
 </body>
 </html>
