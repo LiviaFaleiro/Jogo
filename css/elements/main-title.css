@@ -2,3 +2,7 @@
     font-family: 'Montserrat', sans-serif;
     color: var(--color-second);
 }
+
+.main-title.-second {
+    color: var(--color-ninth);
+}

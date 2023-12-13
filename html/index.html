@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="/css/elements/profile.css">
     <link rel="stylesheet" href="/css/elements/choose-options.css">
     <link rel="stylesheet" href="/css/elements/back.css">
+    <link rel="stylesheet" href="/css/elements/button-images.css">
     <link rel="stylesheet" href="/css/tela-inicial/tela-inicial.css">
     <link rel="stylesheet" href="/css/tela-inicial/characters/characters.css">
     <link rel="stylesheet" href="/css/tela-inicial/nomes/nomes.css">
     <link rel="stylesheet" href="/css/tela-registro/registerscreen.css">
     <link rel="stylesheet" href="/css/cidade/town.css">
+    <!-- <link rel="stylesheet" href="/css/cidade/lugares/casa.css"> -->
 </head>
 <body>
 
@@ -100,10 +102,10 @@
     <section class="main-town" id="town" style="display: none;">
         <div class="main-options">
             <div class="choices-wrapper">
-                <button class="choices -el-1" onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->   
-                <button class="choices -el-2" onclick="mercado()">mercado</button>     <!--era sala-->            <!--feito-->
-                <button class="choices -el-3" onclick="festa()">Festa</button>         <!--estudo-->              <!--feito-->
-                <button class="choices -el-4" onclick="casa()">Casa</button>       <!--quarto-->              <!--feito-->
+                <button class="choices -el-work -el-1" onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->   
+                <button class="choices -el-market -el-2" onclick="mercado()">mercado</button>     <!--era sala-->            <!--feito-->
+                <button class="choices -el-party -el-3" onclick="festa()">Festa</button>         <!--estudo-->              <!--feito-->
+                <button class="choices -el-home -el-4" onclick="casa()">Casa</button>       <!--quarto-->              <!--feito-->
             </div>
         </div>
         <figure class="img-narradora">
@@ -116,11 +118,10 @@
 
         <div class="main-options">
             <div class="choices-wrapper">
-                <h1 class="textoGrande">O que deseja comprar</h1>
-                <button onclick="voltar()" class="choices -el-1">Voltar</button>
-                <button id="hamburguer" onclick="comida1()" class="choices -el-2"> Hamburguer</button>
-                <button id="salada" onclick = "comida2()" class="choices -el-3">Salada</button>
-                <button id="bolo" onclick = "comida3()" class="choices -el-4">Bolo</button>
+                <h1 class="main-title -second">O que deseja comprar</h1>
+                <button id="hamburguer" onclick="comida1()" class="choices -el-hamburger -el-1"> </button>
+                <button id="salada" onclick = "comida2()" class="choices -el-salad -el-2"></button>
+                <button id="bolo" onclick = "comida3()" class="choices -el-cake -el-3"></button>
             </div>
         </div>
         <button class="voltar" onclick="voltar()">Voltar</button>
@@ -131,8 +132,8 @@
 
         <div class="main-options">
             <div class="choices-wrapper">
-                <button onclick="dancar()" class="choices -el-1">Dançar</button>
-                <button onclick="beber()"  class="choices -el-2">beber</button>
+                <button onclick="dancar()" class="choices -el-dancar -el-1">Dançar</button>
+                <button onclick="beber()"  class="choices -el-beber -el-2">beber</button>
             </div>
         </div>
     <button class="voltar" onclick="voltar()">Voltar</button>
@@ -141,7 +142,7 @@
 
     <section id="trabalho" style="display:none;">
 
-       <h1 class="textoGrande">Oções de trabalho</h1>
+       <h1 class="main-title -second">Opções de trabalho</h1>
        <button id="vendas" onclick="trabalho1()">Vendas</button>
        <button id="laboratório" onclick="trabalho2()">Laboratório</button>
        <button id="estudio" onclick="trabalho3()">Estudio</button>
@@ -149,15 +150,17 @@
        <button class="voltar" onclick="voltar()">Voltar</button>
     </section>
 
-    <!--dentro da função CASA-->
 
     <section id="dentroCasa" style="display:none">
 
-            <button id="coz"onclick="cozinha()">Ir para cozinha</button>
-            <button id="BANHEIRO" onclick="banheiro()">Ir para o Banheiro</button>
-            <button id="quarto_1" onclick="quarto()">Ir para o quarto</button>
-
-            <button class="voltar" onclick="voltar()">Voltar</button>
+        <div class="main-options">
+            <div class="choices-wrapper">
+                <button id="coz"onclick="cozinha()" class="choices -el-cozinha -el-1">Ir para cozinha</button>
+                <button id="BANHEIRO" onclick="banheiro()" class="choices -el-banheiro -el-2">Ir para o Banheiro</button>
+                <button id="quarto_1" onclick="quarto()" class="choices -el-quarto -el-3">Ir para o quarto</button>
+            </div>
+        </div>
+        <button class="voltar" onclick="voltar()">Voltar</button>
 
     </section>
 
