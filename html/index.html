@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/elements/profile.css">
     <link rel="stylesheet" href="/css/elements/choose-options.css">
     <link rel="stylesheet" href="/css/elements/back.css">
+    <link rel="stylesheet" href="/css/elements/bag.css">
     <link rel="stylesheet" href="/css/elements/button-images.css">
     <link rel="stylesheet" href="/css/tela-inicial/tela-inicial.css">
     <link rel="stylesheet" href="/css/tela-inicial/characters/characters.css">
@@ -69,8 +70,8 @@
                 <input type="text" class="main-text" id="nomeG" placeholder="Digite seu nome" required>
 
                 <div class="wrapper">
-                    <button class="button" type="" id="masculino" name="nomeG" onclick="gen('Masculino')"><span>Masculino</span></button>
-                    <button class="button" type="" id="feminino" name="nomeG" onclick="gen('Feminino')"><span>Feminino</span></button>
+                    <button class="button-gen" type="" id="masculino" name="nomeG" onclick="gen('Masculino')"><span>Masculino</span></button>
+                    <button class="button-gen" type="" id="feminino" name="nomeG" onclick="gen('Feminino')"><span>Feminino</span></button>
                 </div>
             </div>
         </form>
@@ -79,8 +80,8 @@
 
     <div class="profile-section">
 
-        <button class="main-profile" id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
-        <button class="main-profile"  id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
+        <button class="main-button" id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
+        <button class="main-button"  id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
 
         <section class="profile-description" id="perfil" style="display: none;">
             <h2>Perfil do Personagem</h2>
@@ -93,6 +94,14 @@
             <p id="perfilInteligencia"></p>
             <p id="perfilDinheiro"></p>
 
+        </section>
+    </div>
+
+    <div class="main-sacola">
+        <button class="main-button -sacola -abrir" id="Sacola-Abrir" style="display: none;" onclick="abrirSacola()">
+            <span>Sacola</span><span><img src="/assets/pngs/sacola.png" alt=""></span></button>
+        <button class="main-button -sacola -fechar" id="Sacola-Fechar" style="display: none;" onclick="fecharSacola()"></button>
+        <section class="sacola-description">
         </section>
     </div>
 
@@ -197,33 +206,13 @@
     </section>
 <!--fim de dentro da casa-->
 
-    <div class="profile-section">
-
-        <button class="main-profile" id="perfilButton" style="display: none;" onclick="mostrarPerfil()">Perfil</button>
-        <button class="main-profile"  id="fecharPerfilButton" style="display: none;" onclick="fecharPerfil()">Fechar Perfil</button>
-
-        <section class="profile-description" id="perfil" style="display: none;">
-            
-            <h2>Perfil do Personagem</h2>
-
-            <p id="nomePerfil"></p>
-            <p id="generoPerfil"></p>
-            <p id="perfilVida"></p>
-            <p id="perfilEnergia"></p>
-            <p id="perfilFelicidade"></p>
-            <p id="perfilFome"></p>
-            <p id="perfilInteligencia"></p>
-            <p id="perfilDinheiro"></p>
-
-        </section>
-    </div>
-
 
 <!--fim botao perfil-->
     <script defer src="/JS/validate.js"></script>
     <script src="/JS/trabalhar.js"></script>
     <script src="/JS/personagens.js"></script>  
-    <script src="/JS/botaoPerfil.js"></script>   
+    <script src="/JS/botaoPerfil.js"></script>  
+    <script src="/JS/mostrarSacola.js"></script> 
     <script src="/JS/funcaoLugares.js"></script>
     <script src="/JS/voltar.js"></script>
     <script src="/JS/npc.js"></script>
