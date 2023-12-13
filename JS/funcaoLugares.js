@@ -18,11 +18,11 @@ function festa(){
 
 function casa(){
 
-  document.querySelector("#dentroCasa").style.display = "block"
-  document.querySelector("#town").style.display = "none"
-  document.querySelector("#telaP").style.display = "none"
-  document.querySelector("#nomeUsuario").style.display = "none"
-
+    document.body.style.backgroundImage = "url(/assets/cenario/casa.jpg)"
+    document.querySelector("#dentroCasa").style.display = "block"
+    document.querySelector("#town").style.display = "none"
+    document.querySelector("#telaP").style.display = "none"
+    document.querySelector("#nomeUsuario").style.display = "none"
 }
 
 function quarto(){

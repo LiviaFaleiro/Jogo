@@ -1,0 +1,51 @@
+.choices {
+    background-size: cover;
+}
+
+.choices.-el-work {
+    background-image: url(/assets/cenario/trabalho.jpg);
+}
+
+.choices.-el-market {
+    background-image: url(/assets/cenario/mercado.jpg);
+}
+
+.choices.-el-party {
+    background-image: url(/assets/cenario/festa.jpg);
+}
+
+.choices.-el-home {
+    background-image: url(/assets/cenario/casa.jpg);
+}
+
+.choices.-el-hamburger {
+    background-image: url(/assets/comidas/hamburger.png);
+}
+
+.choices.-el-salad {
+    background-image: url(/assets/comidas/salada.png);
+}
+
+.choices.-el-cake {
+    background-image: url(/assets/comidas/bolo.png);
+}
+
+.choices.-el-dancar {
+    background-image: url(/assets/cenario/);
+}
+
+.choices.-el-beber {
+    background-image: url(/assets/cenario/);
+}
+
+.choices.-el-cozinha {
+    background-image: url(/assets/cenario/cozinha.jpg);
+}
+
+.choices.-el-banheiro {
+    background-image: url(/assets/cenario/banheiro.png);
+}
+
+.choices.-el-quarto {
+    background-image: url(/assets/cenario/quarto.jpg);
+}

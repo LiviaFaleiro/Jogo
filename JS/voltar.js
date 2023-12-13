@@ -7,7 +7,7 @@ function voltar(){
     document.getElementById("trabalho").style.display = "none";
     document.getElementById("festar").style.display = "none";
     document.getElementById("market").style.display = "none";
-    document.getElementById("dentroCasa").display = "none";
+    document.getElementById("dentroCasa").style.display = "none";
     document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)"
 
 }
