@@ -8,3 +8,9 @@
     display: block;
     padding-right: 20px;
 }
+
+.main-title.-third {
+    color: var(--color-ninth);
+    display: flex;
+    justify-content: center;
+}

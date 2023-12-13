@@ -44,3 +44,30 @@
     transform: scale(1.2);
     transition: all 0.2;
 }
+
+.line {
+    background-color: var(--color-negative);
+    height: 5px;
+    width: 100%;
+}
+
+.centralize {
+    display: flex;
+    flex-direction: column;
+}
+
+.comida {
+    width: 25%;
+}
+
+.food-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.food {
+    color: var(--color-negative);
+    font-size: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+}

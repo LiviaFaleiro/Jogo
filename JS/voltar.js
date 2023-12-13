@@ -1,6 +1,6 @@
 
 function voltar(){
-
+    document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)"
     document.getElementById("town").style.display = "flex";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none";
@@ -9,8 +9,7 @@ function voltar(){
     document.getElementById("market").style.display = "none";
     document.getElementById("dentroCasa").style.display = "none";
     document.getElementById("tempo-jogo").style.display="block";
-    document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)"
-
+    document.getElementById("Sacola-Abrir").style.display = "none";
 }
 
 function voltarCasa(){

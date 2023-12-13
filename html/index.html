@@ -95,14 +95,30 @@
         </section>
     </div>
 
-    <div class="main-sacola">
+    <div class="main-sacola" id="bag-id">
         <button class="main-button" id="Sacola-Abrir" style="display: none;" onclick="abrirSacola()">
             <span>Sacola</span><span><img src="/assets/pngs/sacola.png" alt=""></span></button>
     </div>
     <input type="checkbox" style="display: none;" id="checkbox">
     <section class="sacola-description" id="open-description">
-        
+        <h1 class="main-title -third">Comidas</h1>
+        <div class="line"></div>
 
+        <div class="centralize">
+            <div class="food-wrapper">
+                <figure class="comida"><img src="/assets/comidas/hamburger.png" alt="" width="100%"></figure>
+                <div class="food -ham" id="food-ham">1</div>    
+            </div>
+            
+            <div class="food-wrapper">
+                <figure class="comida"><img src="/assets/comidas/salada.png" alt=""  width="100%"></figure>
+                <div class="food -salad" id="food-salad">2</div>
+            </div>
+            <div class="food-wrapper">
+                <figure class="comida"><img src="/assets/comidas/bolo.png" alt=""  width="100%"></figure>
+                <div class="food -cake" id="food-cake">3</div>    
+            </div>
+        </div>
     </section>
 
     <section class="main-town" id="town" style="display: none;">
