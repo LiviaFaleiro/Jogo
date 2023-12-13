@@ -61,23 +61,20 @@
 
     </section>
 
-
-    <form class="main-form" id="nomeUsuario" style="display: none;">
-
-
-        <div class="column">
-            <h1 class="main-title -title" id="title">Digite seu nome!</h1>
-            
+    <div id="error">
+        <form class="main-form" id="nomeUsuario" style="display: none;" action="/" method="GET">
+            <div class="column">
+                <h1 class="main-title -title" id="title">Digite seu nome!</h1>
+                
                 <input type="text" class="main-text" id="nomeG" placeholder="Digite seu nome" required>
 
-            <div class="wrapper">
-            
-                    <a class="button" type="submit" id="masculino" onclick="gen('Masculino')"><span>Masculino</span></a>
-                    <a class="button" type="submit" id="feminino" onclick="gen('Feminino')"><span>Feminino</span></a>
+                <div class="wrapper">
+                    <button class="button" type="" id="masculino" name="nomeG" onclick="gen('Masculino')"><span>Masculino</span></button>
+                    <button class="button" type="" id="feminino" name="nomeG" onclick="gen('Feminino')"><span>Feminino</span></button>
+                </div>
             </div>
-        </div>
-
-    </form>
+        </form>
+    </div>
     
 
     <div class="profile-section">
@@ -155,9 +152,9 @@
 
         <div class="main-options">
             <div class="choices-wrapper">
-                <button id="coz"onclick="cozinha()" class="choices -el-cozinha -el-1">Ir para cozinha</button>
-                <button id="BANHEIRO" onclick="banheiro()" class="choices -el-banheiro -el-2">Ir para o Banheiro</button>
-                <button id="quarto_1" onclick="quarto()" class="choices -el-quarto -el-3">Ir para o quarto</button>
+                <button id="coz"onclick="cozinha()" class="choices -el-cozinha -el-1"></button>
+                <button id="BANHEIRO" onclick="banheiro()" class="choices -el-banheiro -el-2"></button>
+                <button id="quarto_1" onclick="quarto()" class="choices -el-quarto -el-3"></button>
             </div>
         </div>
         <button class="voltar" onclick="voltar()">Voltar</button>
@@ -211,6 +208,7 @@
 
 
 <!--fim botao perfil-->
+    <script defer src="/JS/validate.js"></script>
     <script src="/JS/trabalhar.js"></script>
     <script src="/JS/personagens.js"></script>  
     <script src="/JS/botaoPerfil.js"></script>   

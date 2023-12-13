@@ -4,6 +4,7 @@
 }
 
 .button{
+    background: transparent;
     width: 200px;
     height: 40px;
     line-height: 40px;
