@@ -12,52 +12,83 @@ if(personagemSelecionado){
 
             //laboratório de informática
         
-            alert("Você trabalhou e por isso ganhou 50 reais mas perdeu 5 pontos de vida")
-            personagemSelecionado.vida-=5
-            personagemSelecionado.inteligencia+=5
-            personagemSelecionado.felicidade-=4
-            personagemSelecionado.dinheiro+=50
-            personagemSelecionado.fome+=10
+            document.getElementById("col2").style.display = "block"
+            document.getElementById("trabP").style.display = "block"
+
+            
         }
        else if(personagemSelecionado == atriz){
 
-            //estudio
-            alert("Você passou horas trabalhando em um dos estúdios da Globo, ganhou 25 reais mas perdeu 10 pontos de energia")
-            personagemSelecionado.energia-=10
-            personagemSelecionado.dinheiro+= 40
-            personagemSelecionado.fome+=15
-            personagemSelecionado.felicidade-=2
+          document.getElementById("col3").style.display = "block"          
+          document.getElementById("trabA").style.display = "block"
 
         }
         else if(personagemSelecionado == cozinheira){
 
              //cozinha
-             alert("Após ficar horas trabalhando em uma cozinha, você ganhou 35 reais, mas perdeu 15 pontos de energia")
-             personagemSelecionado.energia-=15 
-             personagemSelecionado.dinheiro+=35
-             personagemSelecionado.fome+=25
-             personagemSelecionado.felicidade-=4
-
+             document.getElementById("trabC").style.display = "block"
+             document.getElementById("col4").style.display = "block"
+     
         }
         else if(personagemSelecionado == paleontologa){
              //labBiologia
-             
-
-             alert("É dificil achar e mexer com fósseis, você ganhou 35 reais mas perdeu 2 pontos de energia")
-             personagemSelecionado.dinheiro+= 40
-             personagemSelecionado.energia-=2
-             personagemSelecionado.fome+=10
-             personagemSelecionado.felicidade-=2
+             document.getElementById("trabPa").style.display = "block"
+             document.getElementById("col1").style.display = "block"
         }
 
 }
-atualizarPerfil(personagemSelecionado)
+}
+
+function programadoraT(){
+
+personagemSelecionado.vida-=5
+personagemSelecionado.inteligencia+=5
+personagemSelecionado.felicidade-=4
+personagemSelecionado.dinheiro+=50
+personagemSelecionado.fome+=10
+
+     atualizarPerfil(personagemSelecionado)
+}
+
+function paleontologaP(){
+
+     
+personagemSelecionado.dinheiro+= 40
+personagemSelecionado.energia-=2
+personagemSelecionado.fome+=10
+personagemSelecionado.felicidade-=2
+
+     atualizarPerfil(personagemSelecionado)
+
+}
+
+function atrizT(){
+
+personagemSelecionado.energia-=10
+personagemSelecionado.dinheiro+= 40
+personagemSelecionado.fome+=15
+personagemSelecionado.felicidade-=2
+
+     atualizarPerfil(personagemSelecionado)
+}
+
+function cozinheiraT(){
+
+personagemSelecionado.energia-=15 
+personagemSelecionado.dinheiro+=35
+personagemSelecionado.fome+=25
+personagemSelecionado.felicidade-=4
+
+ 
+     atualizarPerfil(personagemSelecionado)
 
 }
 
 if(personagemSelecionado.fome>=30){
 
-
         alert("Você está ficando com fome!! vá comer")
+}
+if(personagemSelecionado.energia<=20){
 
+       alert("Vá dormir, estás cansado(a). Se cuide senão vai morrer")
 }
