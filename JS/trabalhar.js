@@ -48,12 +48,12 @@ if(personagemSelecionado){
 
 }
 atualizarPerfil(personagemSelecionado)
+
 }
 
 if(personagemSelecionado.fome>=30){
 
 
         alert("Você está ficando com fome!! vá comer")
-
 
 }

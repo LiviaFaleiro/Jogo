@@ -52,23 +52,9 @@ let nomePersonagem;
 let generoPersonagem;
 let personagemSelecionado;
 
-if(personagemSelecionado.felicidade<20){
-
-       alert("Você está muito melancólico, está perdendo 4 de alegria a cada 20 segundos")
-       function depressao(){
-
-              const intervalID = setInterval(alteraPersonagem,20000)
-
-              function alteraPersonagem(){
-
-                    personagemSelecionado.felicidade-=2
-                    atualizarPerfil(personagemSelecionado)
-              }
-       }
-}
 function vida(){
 
-    const intervalID = setInterval(alteraPersonagem, 10000);
+    const intervalID = setInterval(alteraPersonagem, 50000);
 
            function alteraPersonagem() {
               personagemSelecionado.energia-=1;
@@ -78,31 +64,17 @@ function vida(){
     
 function capitalismo(){
 
-  const IntervalID = setInterval(alteraPersonagem, 30000)
+  const IntervalID = setInterval(mudapersonagem, 30000)
 
-             function alteraPersonagem(){
+             function mudapersonagem(){
 
                      personagemSelecionado.felicidade-=5
                      atualizarPerfil(personagemSelecionado)
-                     alert("O capitalismo suga nossa alegria, perdeu 5 de felicidade")
               
 
              }
 }
 
-function dindin(){
-
-
- const IntervalID = setInterval(alteraPersonagem,40000)
-
-       function alteraPersonagem(){
-
-
-            personagemSelecionado.dinheiro-=30
-            atualizarPerfil(personagemSelecionado)
-
-       }
-}
 
 function telap(personagem) { //tela Perfil
 
@@ -122,10 +94,7 @@ function telap(personagem) { //tela Perfil
     document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + personagem.dinheiro;
     
     personagemSelecionado = personagem;
-    vida()
-    capitalismo()
-    dindin()
-    depressao()
+   
 }
     function nome(){
 
@@ -154,8 +123,11 @@ function telap(personagem) { //tela Perfil
                 document.getElementById("perfilFome").innerText = "Fome: " + personagem.fome;
                 document.getElementById("perfilInteligencia").innerText = "Inteligência: " + personagem.inteligencia;
                 document.getElementById("perfilDinheiro").innerText = "Dinheiro: " + personagem.dinheiro;
+
+                vida()
+                capitalismo()
                 
-                if(personagemSelecionado.energia <=0 || personagemSelecionado.felicidade <=0 || personagemSelecionado.vida<=0 || personagemSelecionado.energia>100){
+                if(personagemSelecionado.energia <0 || personagemSelecionado.felicidade <0 || personagemSelecionado.vida<0 || personagemSelecionado.energia>100){
 
                           document.location = "https://www.orkut.com/index_pt.html"
                            alert("Você morreu igual o Orkut")

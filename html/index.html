@@ -97,7 +97,9 @@
     </div>
 
     <section class="main-town" id="town" style="display: none;">
+        <p id="tempo-jogo">00:00:00</p>
         <div class="main-options">
+
             <div class="choices-wrapper">
                 <button class="choices -el-work -el-1" onclick="trabalhar()">Trabalhar</button>         <!-- parcialmente feito--> 
                 <button class="choices -el-market -el-2" onclick="mercado()">mercado</button>           <!--feito-->
@@ -135,6 +137,16 @@
         </div>
     <button class="voltar" onclick="voltar()">Voltar</button>
     </section>
+
+   <section id="bebidas" style="display: none;">
+             
+               <button onclick="bebida1()">Refrigerante</button>
+               <button onclick="bebida2()">Cerveja</button>
+               <button onclick="bebida3()">Vinho</button>
+               <button onclick="bebida4()">Água</button>
+               <button class="voltarFesta" onclick="voltarMenuFesta()">Voltar para o menu da festa</button>
+
+   </section>
 
 
     <section id="trabalho" style="display:none;">
@@ -217,5 +229,6 @@
     <script src="/JS/npc.js"></script>
     <script src="/JS/trabalhar.js"></script>
     <script src="/JS/mercado-cozinha.js"></script>
+    <script src="/JS/relogio.js"></script>
 </body>
 </html>

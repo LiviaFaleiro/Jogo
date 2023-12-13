@@ -5,6 +5,7 @@ function festa(){
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none";
+    document.getElementById("tempo-jogo").style.display="block";
 
     if(personagemSelecionado.energia<20){
 
@@ -14,7 +15,13 @@ function festa(){
 
 
     }
+    else{
+        
+        alert("Você pagou 50 reais paraentrar na festa.")
+        personagemSelecionado.dinheiro-=50  
     }
+atualizarPerfil(personagemSelecionado)
+}
 
     function dancar(){
 
@@ -62,9 +69,39 @@ atualizarPerfil(personagemSelecionado)
 
     }
 
+    function beber(){
+
+           document.getElementById("bebidas").style.display="block"
+           document.getElementById("festar").style.display = "none";
+
+      
+    }
+
+    function bebida1(){
+
+
+        if(personagemSelecionado){
+
+               if(personagemSelecionado.dinheiro>=7){
+
+                        alert("Compraste uma latinha de refrigerante, custou R$7")
+                        personagemSelecionado.dinheiro-=7
+
+               }
+               else{
+
+                    alert("Não tens dinheiro suficiente para comprar uma latinha de refrigerante")
+                    
+
+               }
+
+        }
+        atualizarPerfil(personagemSelecionado)
+    }
 
     function mercado(){
 
+        document.getElementById("tempo-jogo").style.display="block";
         document.getElementById("market").style.display = "block";
         document.getElementById("town").style.display = "none";
         document.getElementById("telaP").style.display = "none";
@@ -73,6 +110,7 @@ atualizarPerfil(personagemSelecionado)
 
 function casa(){
 
+    document.getElementById("tempo-jogo").style.display="block";
     document.body.style.backgroundImage = "url(/assets/cenario/casa.jpg)"
     document.querySelector("#dentroCasa").style.display = "block"
     document.querySelector("#town").style.display = "none"
@@ -82,7 +120,7 @@ function casa(){
 
 function quarto(){
 
-
+    document.getElementById("tempo-jogo").style.display="block";
     document.getElementById("quartinho").style.display = "block";
     document.getElementById("dentroCasa").style.display = "none";
     document.getElementById("town").style.display = "none";
@@ -112,6 +150,7 @@ atualizarPerfil(personagemSelecionado)
 
 function banheiro(){
 
+    document.getElementById("tempo-jogo").style.display="block";
     document.getElementById("Banheiroo").style.display = "block";
     document.getElementById("dentroCasa").style.display = "none";
     document.getElementById("town").style.display = "none";

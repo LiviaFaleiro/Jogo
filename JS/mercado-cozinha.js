@@ -1,5 +1,6 @@
 function mercado(){
 
+    document.getElementById("tempo-jogo").style.display="block";
     document.getElementById("market").style.display = "block";
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
