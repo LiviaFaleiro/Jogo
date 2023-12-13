@@ -1,9 +1,11 @@
 .profile-section {
     position: absolute;
+    left: 10px;
+    top: 20px;
     background-color: var(--color-fourth);
     width: 200px;
     border-radius: 20px;
-    height: 0%;
+    height: 0;
 }
 
 .main-profile {

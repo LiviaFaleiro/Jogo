@@ -1,12 +1,10 @@
 function festa(){
 
-   
+    document.body.style.backgroundImage = "url(/assets/cenario/festa.jpg)"
     document.getElementById("festar").style.display = "block";
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none";
-
-    mostrarPerfil();
     }
 
 
@@ -16,9 +14,6 @@ function festa(){
         document.getElementById("town").style.display = "none";
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "none"; //nomeg
-
-        mostrarPerfil();
-
 }
 
 function casa(){

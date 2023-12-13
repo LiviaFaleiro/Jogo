@@ -1,0 +1,49 @@
+.main-options {
+    margin-left: 30%;
+    margin-top: 13%;
+    background-color: var(--color-second);
+    width: 30%;
+    height: 20%;
+    border-radius: 25px;
+}
+
+.choices {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--color-sixth);
+    width: 250px;
+    height: 200px;
+    border: 4px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.choices-wrapper {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.choices.-el-1 {
+    margin: 20px 10px 20px 10px;
+    background-size: cover;
+}
+
+.choices.-el-2 {
+    margin: 15px 10px 20px 10px;
+    background-size: cover;
+}
+
+.choices.-el-3 {
+    margin: 0px 10px 20px 10px;
+    background-size: cover;
+}
+
+.choices.-el-4 {
+    margin: 0px 10px 20px 10px;
+    background-size: cover;
+}
