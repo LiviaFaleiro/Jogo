@@ -9,13 +9,17 @@
     margin-top: 11%;
 }
 
+.main-market {
+    margin-right: 6%;
+}
+
 .main-options {
     box-sizing: border-box;
     background-color: var(--color-second);
     width: 35%;
     height: 20%;
     border-radius: 25px;
-    transform: scale(1.2);
+    transform: scale(1);
 }
 
 .choices {
