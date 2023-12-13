@@ -1,0 +1,29 @@
+.main-sacola {
+    position: relative;
+    left: 88%;
+    top: 20px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.main-sacola .main-button {
+    overflow: hidden;
+    align-items: center;
+}
+
+.main-sacola .main-button span {
+    margin-left: 65px;
+    transition: all 0.3s;
+}
+
+.main-sacola .main-button span img {
+    position: relative;
+    width: 25px;
+    top: 50px;
+    right: 105px;
+}
+
+.main-button:hover span {
+    -webkit-transform: translateY(-47px);
+    transition: all 0.3s;
+}
