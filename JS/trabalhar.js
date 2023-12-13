@@ -15,6 +15,7 @@ if(personagemSelecionado){
             alert("Você trabalhou e por isso ganhou 50 reais mas perdeu 5 pontos de vida")
             personagemSelecionado.vida-=5
             personagemSelecionado.inteligencia+=5
+            personagemSelecionado.felicidade-=4
             personagemSelecionado.dinheiro+=50
             personagemSelecionado.fome+=10
         }
@@ -25,6 +26,7 @@ if(personagemSelecionado){
             personagemSelecionado.energia-=10
             personagemSelecionado.dinheiro+= 40
             personagemSelecionado.fome+=15
+            personagemSelecionado.felicidade-=2
 
         }
         else if(personagemSelecionado == cozinheira){
@@ -34,6 +36,7 @@ if(personagemSelecionado){
              personagemSelecionado.energia-=15 
              personagemSelecionado.dinheiro+=35
              personagemSelecionado.fome+=25
+             personagemSelecionado.felicidade-=4
 
         }
         else if(personagemSelecionado == paleontologa){
@@ -44,6 +47,7 @@ if(personagemSelecionado){
              personagemSelecionado.dinheiro+= 40
              personagemSelecionado.energia-=2
              personagemSelecionado.fome+=10
+             personagemSelecionado.felicidade-=2
         }
 
 }
