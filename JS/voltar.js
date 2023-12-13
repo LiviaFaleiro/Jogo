@@ -16,7 +16,7 @@ function voltar(){
 function voltarCasa(){
    
     document.getElementById("tempo-jogo").style.display="block";
-    document.getElementById("dentroCasa").style.display = "block";
+    document.getElementById("dentroCasa").style.display = "flex";
     document.getElementById("quartinho").style.display = "none";
     document.getElementById("Banheiroo").style.display = "none";
 
@@ -24,7 +24,7 @@ function voltarCasa(){
 
 function voltarMenuFesta(){
 
-    document.getElementById("festar").style.display="Block"
+    document.getElementById("festar").style.display="flex"
     document.getElementById("bebidas").style.display="none"
 
 }

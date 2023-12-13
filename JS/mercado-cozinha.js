@@ -1,11 +1,11 @@
 function mercado(){
 
     document.getElementById("tempo-jogo").style.display="block";
-    document.getElementById("market").style.display = "block";
+    document.getElementById("market").style.display = "flex";
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none"; 
-    document.querySelector("#Sacola-Abrir").style.display = "flex"
+    document.querySelector("#Sacola-Abrir").style.display = "flex";
 }
 var hamburguer1 = 0
 

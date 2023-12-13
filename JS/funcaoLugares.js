@@ -1,7 +1,7 @@
 function festa(){
 
     document.body.style.backgroundImage = "url(/assets/cenario/festa.jpg)"
-    document.getElementById("festar").style.display = "block";
+    document.getElementById("festar").style.display = "flex";
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none";
@@ -102,7 +102,7 @@ atualizarPerfil(personagemSelecionado)
     function mercado(){
 
         document.getElementById("tempo-jogo").style.display="block";
-        document.getElementById("market").style.display = "block";
+        document.getElementById("market").style.display = "flex";
         document.getElementById("town").style.display = "none";
         document.getElementById("telaP").style.display = "none";
         document.getElementById("nomeUsuario").style.display = "none"; //nomeg
@@ -112,7 +112,7 @@ function casa(){
 
     document.getElementById("tempo-jogo").style.display="block";
     document.body.style.backgroundImage = "url(/assets/cenario/casa.jpg)"
-    document.querySelector("#dentroCasa").style.display = "block"
+    document.querySelector("#dentroCasa").style.display = "flex"
     document.querySelector("#town").style.display = "none"
     document.querySelector("#telaP").style.display = "none"
     document.querySelector("#nomeUsuario").style.display = "none"
@@ -151,7 +151,7 @@ atualizarPerfil(personagemSelecionado)
 function banheiro(){
 
     document.getElementById("tempo-jogo").style.display="block";
-    document.getElementById("Banheiroo").style.display = "block";
+    document.getElementById("Banheiroo").style.display = "flex";
     document.getElementById("dentroCasa").style.display = "none";
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";

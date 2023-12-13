@@ -62,7 +62,6 @@
 
     </section>
 
-    <div id="error">
         <form class="main-form" id="nomeUsuario" style="display: none;" action="/" method="GET">
             <div class="column">
                 <h1 class="main-title -title" id="title">Digite seu nome!</h1>
@@ -75,7 +74,6 @@
                 </div>
             </div>
         </form>
-    </div>
     
 
     <div class="profile-section">
@@ -98,17 +96,19 @@
     </div>
 
     <div class="main-sacola">
-        <button class="main-button -sacola -abrir" id="Sacola-Abrir" style="display: none;" onclick="abrirSacola()">
+        <button class="main-button" id="Sacola-Abrir" style="display: none;" onclick="abrirSacola()">
             <span>Sacola</span><span><img src="/assets/pngs/sacola.png" alt=""></span></button>
-        <button class="main-button -sacola -fechar" id="Sacola-Fechar" style="display: none;" onclick="fecharSacola()"></button>
-        <section class="sacola-description">
-        </section>
     </div>
+    <input type="checkbox" style="display: none;" id="checkbox">
+    <section class="sacola-description" id="open-description">
+        
+
+    </section>
 
     <section class="main-town" id="town" style="display: none;">
         <p id="tempo-jogo">00:00:00</p>
-        <div class="main-options">
 
+        <div class="main-options">
             <div class="choices-wrapper">
                 <button class="choices -el-work -el-1" onclick="trabalhar()">Trabalhar</button>         <!-- parcialmente feito--> 
                 <button class="choices -el-market -el-2" onclick="mercado()">mercado</button>           <!--feito-->
@@ -122,7 +122,7 @@
     </section>
     
 
-    <section id="market" style="display: none;"> <!--era sala-->
+    <section class="main-market" id="market" style="display: none;"> <!--era sala-->
 
         <div class="main-options">
             <div class="choices-wrapper">
@@ -136,7 +136,7 @@
     </section>
 
 
-    <section id="festar" style="display: none;"> <!--era estudo-->
+    <section class="main-party" id="festar" style="display: none;"> <!--era estudo-->
 
         <div class="main-options">
             <div class="choices-wrapper">
@@ -169,7 +169,7 @@
     </section>
 
 
-    <section id="dentroCasa" style="display:none">
+    <section class="main-home" id="dentroCasa" style="display:none">
 
         <div class="main-options">
             <div class="choices-wrapper">
@@ -196,7 +196,7 @@
     </section>
 
 
-    <section id="Banheiroo" style="display: none;">
+    <section class="main-bath" id="Banheiroo" style="display: none;">
 
         <button onclick="voltarCasa()">Voltar Para a Casa</button>
         <button onclick="banhar()">Tomar Banho</button>

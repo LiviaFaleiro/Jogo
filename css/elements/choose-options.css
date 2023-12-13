@@ -1,14 +1,24 @@
+.main-town, .main-market, .main-party, .main-home, .main-bath {
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.main-town {
+    margin-left: 12%;
+    margin-top: 11%;
+}
+
 .main-options {
-    margin-left: 30%;
-    margin-top: 13%;
+    box-sizing: border-box;
     background-color: var(--color-second);
-    width: 30%;
+    width: 35%;
     height: 20%;
     border-radius: 25px;
+    transform: scale(1.2);
 }
 
 .choices {
-
     display: flex;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;

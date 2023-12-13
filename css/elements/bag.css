@@ -27,3 +27,20 @@
     -webkit-transform: translateY(-47px);
     transition: all 0.3s;
 }
+
+.sacola-description {
+    position: absolute;
+    background-color: var(--color-seven);
+    top: 18%;
+    left: 23%;
+    width: 50%;
+    height: 70%;
+    z-index: 1;
+    transform: scale(0);
+    transition: all 0.3s;
+}
+
+#checkbox:checked + .sacola-description {
+    transform: scale(1.2);
+    transition: all 0.2;
+}
