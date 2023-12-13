@@ -133,15 +133,4 @@ atualizarPerfil(personagemSelecionado)
 
 
 
-let trabalhoescolhido
-
-function trabalhar(){
-
-    document.getElementById("trabalho").style.display = "block";
-    document.getElementById("town").style.display = "none";
-    document.getElementById("telaP").style.display = "none";
-    document.getElementById("nomeUsuario").style.display = "none"; //nomeg
-
-}
-
 

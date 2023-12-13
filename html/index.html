@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="/css/elements/main-button.css">
     <link rel="stylesheet" href="/css/elements/main-title.css">
     <link rel="stylesheet" href="/css/elements/profile.css">
-    <link rel="stylesheet" href="/css/elements/choose-options.css">
     <link rel="stylesheet" href="/css/tela-inicial/tela-inicial.css">
     <link rel="stylesheet" href="/css/tela-inicial/characters/characters.css">
     <link rel="stylesheet" href="/css/tela-inicial/nomes/nomes.css">
@@ -97,13 +96,16 @@
     </div>
 
     <section class="main-town" id="town" style="display: none;">
-        <div class="main-options">
-            <div class="choices-wrapper">
-                <button class="choices -el-1" onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->   
-                <button class="choices -el-2" onclick="mercado()">mercado</button>     <!--era sala-->            <!--feito-->
-                <button class="choices -el-3" onclick="festa()">Festa</button>         <!--estudo-->              <!--feito-->
-                <button class="choices -el-4" onclick="casa()">Casa</button>       <!--quarto-->              <!--feito-->
+        <div class="main-places">
+            <div class="places-wrapper">
+                <button class="places -main-work" onclick="trabalhar()">Trabalhar</button> <!-- era trabalhar -->   
+                <button class="places -main-kitchen" onclick="cozinha()">Cozinha</button>     <!--era cozinha-->
+                <button class="places -main-market" onclick="mercado()">mercado</button>     <!--era sala-->            <!--feito-->
+                <button class="places -main-party" onclick="festa()">Festa</button>         <!--estudo-->              <!--feito-->
+                <button class="places -main-room" onclick="casa()">Casa</button>       <!--quarto-->              <!--feito-->
+                <button class="places -main-bathroom" onclick="banheiro()">Banheiro</button>   <!-- era banheiro -->      <!--feito-->
             </div>
+            
         </div>
         <figure class="img-narradora">
             <img src="/assets/personagens/narradora.png" alt="narradora">
@@ -113,26 +115,21 @@
 
     <section id="market" style="display: none;"> <!--era sala-->
 
-        <div class="main-options">
-            <div class="choices-wrapper">
-                <h1 class="textoGrande">O que deseja comprar</h1>
-                <button onclick="voltar()" class="choices -el-1">Voltar</button>
-                <button id="hamburguer" onclick="comida1()" class="choices -el-2"> Hamburguer</button>
-                <button id="salada" onclick = "comida2()" class="choices -el-3">Salada</button>
-                <button id="bolo" onclick = "comida3()" class="choices -el-4">Bolo</button>
-            </div>
-        </div>
+        <h1 class="textoGrande">O que deseja comprar</h1>
+        <button onclick="voltar()">Voltar</button>
+        <button id="hamburguer" onclick="comida1()"> Hamburguer</button>
+        <button id="salada" onclick = "comida2()">Salada</button>
+        <button id="bolo" onclick = "comida3()">Bolo</button>
+
     </section>
 
-    
+
     <section id="festar" style="display: none;"> <!--era estudo-->
-        <div class="main-options">
-            <div class="choices-wrapper">
-                <button onclick="voltar()" class="choices -el-1">Voltar</button>
-                <button onclick="dancar()" class="choices -el-2">Dançar</button>
-                <button onclick="beber()"  class="choices -el-3">beber</button>
-            </div>
-        </div>
+
+        <button onclick="voltar()">Voltar</button>
+        <button onclick="dancar()">Dançar</button>
+        <button onclick="beber()">beber</button>
+
     </section>
 
 
@@ -146,14 +143,14 @@
 
     </section>
 
+    <!--dentro da função CASA-->
 
-    
     <section id="dentroCasa" style="display:none">
 
-            <button onclick="voltar()">Voltar</button>
             <button id="coz"onclick="cozinha()">Ir para cozinha</button>
             <button id="BANHEIRO" onclick="banheiro()">Ir para o Banheiro</button>
             <button id="quarto_1" onclick="quarto()">Ir para o quarto</button>
+            <button onclick="voltar()">Voltar</button>
 
 
     </section>
@@ -170,17 +167,15 @@
          <button onclick="mimir()">Dormir</button>
          <button onclick="voltarCasa()">Voltar Para a Casa</button>
 
-         
-
     </section>
 
 
     <section id="Banheiroo" style="display: none;">
 
+        <button onclick="voltarCasa()">Voltar Para a Casa</button>
         <button onclick="banhar()">Tomar Banho</button>
         <button onclick="escovar()">Escovar os dentes</button>
         <button onclick="rosto()">Lavar o Rosto</button>
-        <button onclick="voltarCasa()">Voltar Para a Casa</button>
         
     </section>
 <!--fim de dentro da casa-->
@@ -214,6 +209,5 @@
     <script src="/JS/funcaoLugares.js"></script>
     <script src="/JS/voltar.js"></script>
     <script src="/JS/npc.js"></script>
-    <script src="/JS/mercado&cozinha.js"></script>
 </body>
 </html>
