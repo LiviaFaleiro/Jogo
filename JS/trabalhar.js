@@ -92,3 +92,9 @@ if(personagemSelecionado.energia<=20){
 
        alert("Vá dormir, estás cansado(a). Se cuide senão vai morrer")
 }
+
+if(personagemSelecionado.dinheiro<=0){
+
+      alert("O capitalismo sugou tudo que você tinha, trabalhe mais...para conseguir um pouco de dinheiro")
+
+}
