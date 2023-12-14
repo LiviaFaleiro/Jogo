@@ -7,7 +7,9 @@ function mercado(){
     document.getElementById("nomeUsuario").style.display = "none"; 
     document.querySelector("#Sacola-Abrir").style.display = "flex";
 }
-var hamburguer1 = 0
+var quant1 = 0
+var quant2 = 0
+var quant3 = 0
 
 function comida1(){
 
@@ -17,7 +19,8 @@ function comida1(){
 
             alert("voce comprou um hamburguer de R$25! está no seu inventário")
             personagemSelecionado.dinheiro-=25
-            hamburguer1++
+            quant1++
+            document.getElementById("food-ham").innerHTML = quant1
         }
         
         else{
@@ -38,6 +41,9 @@ function comida2(){
   
             alert("você comprou uma salada de R$10! Está no seu inventário, quando precisar pode comê-lo")
             personagemSelecionado.dinheiro-=10
+            quant2++
+            document.getElementById("food-salad").innerHTML = quant2
+            
             
 
         }
@@ -59,6 +65,8 @@ function comida3(){
 
             alert("você comprou uma fatia de bolo por R$20, está no seu inventário, quando precisar/querer, pode comer")
             personagemSelecionado.dinheiro-=20
+            quant3++
+            document.getElementById("food-cake").innerHTML = quant3
 
         }
 

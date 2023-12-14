@@ -282,4 +282,3 @@ function rosto(){
        }
 atualizarPerfil(personagemSelecionado)
 }
-
