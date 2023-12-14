@@ -15,6 +15,12 @@ function festa(){
 
 
     }
+    else if(personagemSelecionado.dinheiro<50){
+
+          alert("Você não tem R$50 para entrar na festa.")
+          voltar()
+
+    }
     else{
         
         alert("Você pagou 50 reais paraentrar na festa.")

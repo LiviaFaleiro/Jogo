@@ -17,7 +17,7 @@ colega1.especial = ["Parece que não dormiu hoje."];
 let colega2 = new NPC(); // aparece no laboratório de informática
 colega2.nomeN = "colega de trabalho programador";
 colega2.falas = ["Nossa que cara horrivel, aceita café?", "Minha div não centraliza, pode me ajudar?"];
-colega2.especial = ["Nossa, que cara de quem dormiu e sonhou com JavaScript com orientação ao objeto!! Que pesadelo.", "Eu deveria ser Canonizado, não acha?"]
+colega2.especial = ["Nossa, que cara de quem dormiu e sonhou com JavaScript com orientação ao objeto!! Que pesadelo.", "Eu deveria ser Canonizado, não acha?", "cara de quem dormiu e sonhou que criava uma sacola com JS"]
 
 let colega3 = new NPC(); // aparece no estudio
 colega3.nomeN = "colega de trabalho Atriz";
