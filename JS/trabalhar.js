@@ -1,10 +1,5 @@
 
 function trabalhar(){
-
-     if (personagemSelecionado = paleontologaP) {
-        
-          document.body.style.backgroundImage = "url ()"
-     }
     document.getElementById("trabalho").style.display = "block";
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";

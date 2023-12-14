@@ -10,7 +10,7 @@
     width: 200px;
     position: absolute;
     left: 7%;
-    top: 50%;
+    top: 54%;
     cursor: pointer;
 }
 
@@ -42,6 +42,20 @@
     position: absolute;
     width: 230px;
     left: 7%;
-    top: 47%;
+    top: 44%;
     cursor: pointer;
+}
+
+.alert-npc {
+    padding: 10px;
+    color: black;
+    font-family: 'Montserrat';
+    font-size: 25px;
+    position: absolute;
+    background-color: white;
+    left: 3%;
+    top: 36%;
+    width: 23%;
+    height: 15%;
+    border-radius: 20px;
 }

@@ -56,9 +56,10 @@ function FALA(npc) {
 
     if (personagemSelecionado) {
         if (personagemSelecionado.felicidade <= 50) {
-            alert(falaEspecial);
+            var fal = document.getElementById("fala-npc")
+            alert (falaEspecial);
         } else {
-            alert(falaAleatoria);
+            alert (falaAleatoria);
         }
     }
 }
