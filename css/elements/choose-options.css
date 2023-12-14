@@ -1,4 +1,4 @@
-.main-town, .main-market, .main-party, .main-home, .main-bath, .main-room {
+.main-town, .main-market, .main-party, .main-home, .main-bath, .main-room, .main-bebidas {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
@@ -10,7 +10,7 @@
 }
 
 .main-market {
-    margin-right: 6%;
+    margin-right: 1%;
 }
 
 .main-options {

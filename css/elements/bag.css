@@ -54,7 +54,7 @@
 
 .sacola-description {
     position: absolute;
-    background-color: var(--color-seven);
+    background-color: var(--color-second);
     top: 18%;
     left: 23%;
     width: 50%;
@@ -94,4 +94,10 @@
     font-size: 50px;
     margin-left: 50px;
     margin-top: 50px;
+}
+
+.eat {
+    display: block;
+    margin-top: 5%;
+    margin-left: 40%;
 }

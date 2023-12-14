@@ -66,18 +66,18 @@
     background-image: url(/assets/açoes/dormir.gif);
 }
 
-.choices.-el- {
-    background-image: url();
+.choices.-el-refrigerante {
+    background-image: url(/assets/comidas/refrigerante.jpg);
 }
 
-.choices.-el- {
-    background-image: url();
+.choices.-el-cerveja {
+    background-image: url(/assets/comidas/cerveja.png);
 }
 
-.choices.-el- {
-    background-image: url();
+.choices.-el-vinho {
+    background-image: url(/assets/comidas/vinho.jpg);
 }
 
-.choices.-el- {
-    background-image: url();
+.choices.-el-agua {
+    background-image: url(/assets/comidas/agua.jpg);
 }

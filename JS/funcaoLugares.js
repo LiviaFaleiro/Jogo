@@ -67,7 +67,7 @@ atualizarPerfil(personagemSelecionado)
 
     function beber(){
 
-           document.getElementById("bebidas").style.display="block"
+           document.getElementById("bebidas").style.display="flex"
            document.getElementById("festar").style.display = "none";
 
       

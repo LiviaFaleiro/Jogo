@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="/css/elements/back.css">
     <link rel="stylesheet" href="/css/elements/bag.css">
     <link rel="stylesheet" href="/css/elements/npcs.css">
+    <link rel="stylesheet" href="/css/elements/relogio.css">
     <link rel="stylesheet" href="/css/elements/button-images.css">
     <link rel="stylesheet" href="/css/tela-inicial/tela-inicial.css">
     <link rel="stylesheet" href="/css/tela-inicial/characters/characters.css">
     <link rel="stylesheet" href="/css/tela-inicial/nomes/nomes.css">
     <link rel="stylesheet" href="/css/tela-registro/registerscreen.css">
     <link rel="stylesheet" href="/css/cidade/town.css">
-    <!-- <link rel="stylesheet" href="/css/cidade/lugares/casa.css"> -->
 </head>
 <body>
 
@@ -108,22 +108,27 @@
         <div class="centralize">
             <div class="food-wrapper">
                 <figure class="comida"><img src="/assets/comidas/hamburger.png" alt="" width="100%"></figure>
-                <div class="food -ham" id="food-ham">0</div>    
+                <div class="food -ham" id="food-ham">0</div>   
+                <div class="eat"><button class="main-button" >Comer hamburger</button></div> 
             </div>
             
             <div class="food-wrapper">
                 <figure class="comida"><img src="/assets/comidas/salada.png" alt=""  width="100%"></figure>
-                <div class="food -salad" id="food-salad">0</div>
+                <div class="food -salad" id="food-salad">0</div>`
+                <div class="eat"><button class="main-button">Comer Salada</button></div> 
             </div>
             <div class="food-wrapper">
                 <figure class="comida"><img src="/assets/comidas/bolo.png" alt=""  width="100%"></figure>
-                <div class="food -cake" id="food-cake">0</div>    
+                <div class="food -cake" id="food-cake">0</div>
+                <div class="eat"><button class="main-button">Comer bolo</button></div> 
             </div>
         </div>
     </section>
 
+    <p class="relogio" id="tempo-jogo">00:00:00</p>
+
     <section class="main-town" id="town" style="display: none;">
-        <p id="tempo-jogo">00:00:00</p>
+        
 
         <div class="main-options">
             <div class="choices-wrapper">
@@ -137,11 +142,9 @@
             <img src="/assets/personagens/narradora.png" alt="narradora">
         </figure>
     </section>
-    
 
     <section class="main-market" id="market" style="display: none;"> <!--era sala-->
 
-        <button  id="karen" onclick="FALA(karen)">Karen A chata</button>
         <div class="main-options">
             <div class="choices-wrapper">
                 <h1 class="main-title -second">O que deseja comprar</h1>
@@ -150,6 +153,7 @@
                 <button id="bolo" onclick = "comida3()" class="choices -el-cake -el-3"></button>
             </div>
         </div>
+        <figure class="karen-img"><img onclick="FALA(karen)" id="karen" src="/assets/personagens/KarenNpc.png" width="100%"></img></figure> 
         <button class="voltar" onclick="voltar()">Voltar</button>
     </section>
 
@@ -165,29 +169,36 @@
     <button class="voltar" onclick="voltar()">Voltar</button>
     </section>
 
-   <section id="bebidas" style="display: none;">
+   <section class="main-bebidas" id="bebidas" style="display: none;">
              
-               <button onclick="bebida1()">Refrigerante</button>
-               <button onclick="bebida2()">Cerveja</button>
-               <button onclick="bebida3()">Vinho</button>
-               <button onclick="bebida4()">Água</button>
-               <button class="voltarFesta" onclick="voltarMenuFesta()">Voltar para o menu da festa</button>
-
+        <div class="main-options">
+            <div class="choices-wrapper">
+                <button style="color: white;" onclick="bebida1()" class="choices -el-refrigerante -el-1">Refrigerante</button>
+                <button style="color: white;" onclick="bebida2()" class="choices -el-cerveja -el-2">Cerveja</button>
+                <button style="color: white;" onclick="bebida3()" class="choices -el-vinho -el-3">Vinho</button>
+                <button style="color: white;" onclick="bebida4()" class="choices -el-agua -el-4">Água</button>
+                
+            </div>
+        </div>
+        <div class="main-animation -home">
+            <button class="main-button -home" onclick="voltarMenuFesta()"><span>Voltar para festa</span><span><img src="/assets/pngs/voltar.png" alt="" width="100%"></span></button>
+        </div>
    </section>
 
 
     <section id="trabalho" style="display:none;">
 
-        <button  id="col1" onclick="FALA(colega1)"style="display:none;">colega de trabalho paleontologo</button>
-        <button  id="col2" onclick="FALA(colega2)"style="display:none;">colega de trabalho Programador</button>
-        <button  id="col3" onclick="FALA(colega3)"style="display:none;">colega de trabalho Atriz</button>
-        <button  id="col4" onclick="FALA(colega4)"style="display:none;">Chefe de cozinha</button>
+        <figure class="col4-img"><img onclick="FALA(colega4)" id="col4" src="/assets/personagens/colega4.png" width="100%" style="display:none;"></img></figure> 
+        <figure class="col2-img"><img onclick="FALA(colega2)" id="col2" src="/assets/personagens/colega2.png" width="100%" style="display:none;"></img></figure> 
+        <figure class="col1-img"><img onclick="FALA(colega1)" id="col1" src="/assets/personagens/colega1.png" width="100%" style="display:none;"></img></figure> 
+        <figure class="col3-img"><img onclick="FALA(colega3)" id="col3" src="/assets/personagens/colegaNPC3.png" width="100%" style="display:none;"></img></figure> 
         
-        <button id="trabP" onclick="programadoraT()"style="display:none;">Programar</button>
-        <button id="trabPa" onclick="paleontologaP()"style="display:none;">Limpar fóssil</button>
-        <button id="trabA" onclick="atrizT()"style="display:none;">Trabalhar no estúdio de Globo</button>
-        <button id="trabC" onclick="cozinheiraT()"style="display:none;">trabalhar no restaurante</button>
-        
+        <div class="main-animation -work">
+                <button id="trabP" class="main-button -work" onclick="programadoraT()"style="display:none;">Programar</button>
+                <button id="trabPa" class="main-button -work" onclick="paleontologaP()"style="display:none;">Limpar fóssil</button>
+                <button id="trabA" class="main-button -work" onclick="atrizT()"style="display:none;">Trabalhar no estúdio de Globo</button>
+                <button id="trabC" class="main-button -work" onclick="cozinheiraT()"style="display:none;">trabalhar no restaurante</button>
+        </div>
 
        <button class="voltar" onclick="voltar()">Voltar</button>
     

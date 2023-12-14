@@ -1,5 +1,5 @@
 function mercado(){
-
+    document.body.style.backgroundImage = "url(/assets/cenario/mercado.jpg)"
     document.getElementById("tempo-jogo").style.display="block";
     document.getElementById("market").style.display = "flex";
     document.getElementById("town").style.display = "none";

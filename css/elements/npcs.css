@@ -5,3 +5,43 @@
     top: 60%;
     cursor: pointer;
 }
+
+.karen-img {
+    width: 200px;
+    position: absolute;
+    left: 7%;
+    top: 50%;
+    cursor: pointer;
+}
+
+.col4-img {
+    position: absolute;
+    width: 230px;
+    left: 7%;
+    top: 47%;
+    cursor: pointer;
+}
+
+.col2-img {
+    position: absolute;
+    width: 230px;
+    left: 7%;
+    top: 47%;
+    cursor: pointer;
+}
+
+.col1-img  {
+    position: absolute; 
+    width: 230px;
+    left: 7%;
+    top: 47%;
+    cursor: pointer;
+}
+
+.col3-img  {
+    position: absolute;
+    width: 230px;
+    left: 7%;
+    top: 47%;
+    cursor: pointer;
+}

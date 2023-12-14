@@ -1,0 +1,9 @@
+.relogio {
+    position: absolute;
+    top: 4%;
+    left: 45%;
+    font-family: 'Montserrat', 'Sans serif';
+    font-weight: bold;
+    font-size: 30px;
+    color: var(--color-zero);
+}
