@@ -1,6 +1,6 @@
 
 function voltar(){
-    document.body.style.backgroundImage = "url(/assets/cenario/telaLogin.jpg)"
+    document.body.style.backgroundImage = "url(/assets/cenario/tela-inicial.jpeg)"
     document.getElementById("town").style.display = "flex";
     document.getElementById("telaP").style.display = "none";
     document.getElementById("nomeUsuario").style.display = "none";
@@ -26,5 +26,6 @@ function voltarMenuFesta(){
 
     document.getElementById("festar").style.display="flex"
     document.getElementById("bebidas").style.display="none"
+    document.body.style.backgroundImage = "url(/assets/cenario/festa.jpg)"
 
 }

@@ -107,6 +107,7 @@ function telap(personagem) {
         }
     
         function gen(genero) {
+        document.body.style.backgroundImage = "url(/assets/cenario/tela-inicial.jpeg)"
         nomePersonagem = document.getElementById("nomeG").value;
         generoPersonagem = genero;
         document.getElementById("town").style.display = "flex";

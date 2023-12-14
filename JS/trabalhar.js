@@ -1,10 +1,6 @@
 
 function trabalhar(){
 
-     if (personagemSelecionado = paleontologaP) {
-        
-          document.body.style.backgroundImage = "url ()"
-     }
     document.getElementById("trabalho").style.display = "block";
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";
@@ -15,9 +11,10 @@ if(personagemSelecionado){
        if (personagemSelecionado == programadora){
 
             //laboratório de informática
-        
+
             document.getElementById("col2").style.display = "block"
             document.getElementById("trabP").style.display = "block"
+            document.body.style.backgroundImage = "url(/assets/cenario/informatica.png)"
 
             
         }
@@ -25,6 +22,7 @@ if(personagemSelecionado){
 
           document.getElementById("col3").style.display = "block"          
           document.getElementById("trabA").style.display = "block"
+          document.body.style.backgroundImage = "url(/assets/cenario/teatro.jpg)"
 
         }
         else if(personagemSelecionado == cozinheira){
@@ -32,12 +30,14 @@ if(personagemSelecionado){
              //cozinha
              document.getElementById("trabC").style.display = "block"
              document.getElementById("col4").style.display = "block"
+             document.body.style.backgroundImage = "url(/assets/cenario/restaurante.jpg)"
      
         }
         else if(personagemSelecionado == paleontologa){
              //labBiologia
              document.getElementById("trabPa").style.display = "block"
              document.getElementById("col1").style.display = "block"
+             document.body.style.backgroundImage = "url(/assets/cenario/ciencias.jpg)"
         }
 
 }

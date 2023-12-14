@@ -74,6 +74,7 @@ atualizarPerfil(personagemSelecionado)
     function beber(){
 
            document.getElementById("bebidas").style.display="flex"
+           document.body.style.backgroundImage = "url(/assets/cenario/bar.jpg)"
            document.getElementById("festar").style.display = "none";
 
       
@@ -185,6 +186,7 @@ function casa(){
 
 function quarto(){
 
+    document.body.style.backgroundImage = "url(/assets/cenario/quarto.jpg)"
     document.getElementById("tempo-jogo").style.display="block";
     document.getElementById("quartinho").style.display = "flex";
     document.getElementById("dentroCasa").style.display = "none";
@@ -215,6 +217,7 @@ atualizarPerfil(personagemSelecionado)
 
 function banheiro(){
 
+    document.body.style.backgroundImage = "url(/assets/cenario/banheiroo.jpeg)"
     document.getElementById("tempo-jogo").style.display="block";
     document.getElementById("Banheiroo").style.display = "flex";
     document.getElementById("dentroCasa").style.display = "none";
@@ -286,5 +289,13 @@ function rosto(){
 
         }
        }
+atualizarPerfil(personagemSelecionado)
+}
+if(personagemSelecionado){
+
+    if(personagemSelecionado.fome <0){
+
+        personagemSelecionado.fome=0
+    }
 atualizarPerfil(personagemSelecionado)
 }
