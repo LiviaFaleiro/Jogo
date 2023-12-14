@@ -170,7 +170,7 @@ atualizarPerfil(personagemSelecionado)
         document.getElementById("market").style.display = "flex";
         document.getElementById("town").style.display = "none";
         document.getElementById("telaP").style.display = "none";
-        document.getElementById("nomeUsuario").style.display = "none"; //nomeg
+        document.getElementById("nomeUsuario").style.display = "none";
 }
 
 function casa(){
