@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/elements/choose-options.css">
     <link rel="stylesheet" href="/css/elements/back.css">
     <link rel="stylesheet" href="/css/elements/bag.css">
+    <link rel="stylesheet" href="/css/elements/npcs.css">
     <link rel="stylesheet" href="/css/elements/button-images.css">
     <link rel="stylesheet" href="/css/tela-inicial/tela-inicial.css">
     <link rel="stylesheet" href="/css/tela-inicial/characters/characters.css">
@@ -95,7 +96,7 @@
         </section>
     </div>
 
-    <div class="main-sacola" id="bag-id">
+    <div class="main-animation" id="bag-id">
         <button class="main-button" id="Sacola-Abrir" style="display: none;" onclick="abrirSacola()">
             <span>Sacola</span><span><img src="/assets/pngs/sacola.png" alt=""></span></button>
     </div>
@@ -208,24 +209,37 @@
 
 
     <section id="cozinha" style="display: none;">
-
-
+        <div class="main-animation -home">
+            <button class="main-button -home" onclick="voltarCasa()"><span>Voltar para casa</span><span><img src="/assets/pngs/voltar.png" alt="" width="100%"></span></button>
+        </div>
     </section>
 
-    <section id="quartinho" style="display: none;">
+    <section class="main-room" id="quartinho" style="display: none;">
 
-         <button onclick="mimir()">Dormir</button>
-         <button onclick="voltarCasa()">Voltar Para a Casa</button>
-        <button  id="gatinho" onclick="FALA(gato)">Gatinho de Estimação</button>
+        <div class="main-options">
+            <div class="choices-wrapper">
+                <button onclick="mimir()" class="choices -el-dormir -el-1">Dormir</button>
+            </div>
+        </div>
+        <figure class="cat-img"><img onclick="FALA(gato)" id="gatinho" src="/assets/personagens/catNPC.png" width="100%"></img></figure> 
+        <div class="main-animation -home">
+            <button class="main-button -home" onclick="voltarCasa()"><span>Voltar para casa</span><span><img src="/assets/pngs/voltar.png" alt="" width="100%"></span></button>
+        </div>
     </section>
 
 
     <section class="main-bath" id="Banheiroo" style="display: none;">
 
-        <button onclick="voltarCasa()">Voltar Para a Casa</button>
-        <button onclick="banhar()">Tomar Banho</button>
-        <button onclick="escovar()">Escovar os dentes</button>
-        <button onclick="rosto()">Lavar o Rosto</button>
+        <div class="main-options">
+            <div class="choices-wrapper">
+                <button onclick="banhar()" class="choices -el-banho -el-1">Tomar Banho</button>
+                <button onclick="escovar()" class="choices -el-dentes -el-2">Escovar os dentes</button>
+                <button onclick="rosto()" class="choices -el-rosto -el-3">Lavar o Rosto</button>
+            </div>
+        </div>
+        <div class="main-animation -home">
+            <button class="main-button -home" onclick="voltarCasa()"><span>Voltar para casa</span><span><img src="/assets/pngs/voltar.png" alt="" width="100%"></span></button>
+        </div>
 
     </section>
 <!--fim de dentro da casa-->

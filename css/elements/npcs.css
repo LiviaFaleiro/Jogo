@@ -1,0 +1,7 @@
+.cat-img {
+    width: 300px;
+    position: absolute;
+    left: 85%;
+    top: 60%;
+    cursor: pointer;
+}

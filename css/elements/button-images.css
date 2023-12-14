@@ -31,11 +31,11 @@
 }
 
 .choices.-el-dancar {
-    background-image: url(/assets/comidas/dancar.gif);
+    background-image: url(/assets/açoes/dancar.gif);
 }
 
 .choices.-el-beber {
-    background-image: url(/assets/comidas/beber.jpg);
+    background-image: url(/assets/açoes/beber.jpg);
 }
 
 .choices.-el-cozinha {
@@ -48,4 +48,36 @@
 
 .choices.-el-quarto {
     background-image: url(/assets/cenario/quarto.jpg);
+}
+
+.choices.-el-dentes {
+    background-image: url(/assets/açoes/escovar.gif);
+}
+
+.choices.-el-banho {
+    background-image: url(/assets/açoes/banho.gif);
+}
+
+.choices.-el-rosto {
+    background-image: url(/assets/açoes/rosto.gif);
+}
+
+.choices.-el-dormir {
+    background-image: url(/assets/açoes/dormir.gif);
+}
+
+.choices.-el- {
+    background-image: url();
+}
+
+.choices.-el- {
+    background-image: url();
+}
+
+.choices.-el- {
+    background-image: url();
+}
+
+.choices.-el- {
+    background-image: url();
 }

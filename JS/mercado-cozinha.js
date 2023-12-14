@@ -70,3 +70,10 @@ function comida3(){
 atualizarPerfil(personagemSelecionado)  
 
 }
+
+function cozinha() {
+    document.body.style.backgroundImage = "url(/assets/cenario/cozinha.jpg)"
+    document.querySelector("#cozinha").style.display = "flex";
+    document.querySelector("#Sacola-Abrir").style.display = "flex";
+    document.querySelector("#dentroCasa").style.display = "none"
+}

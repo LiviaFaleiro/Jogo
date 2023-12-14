@@ -184,7 +184,7 @@ function casa(){
 function quarto(){
 
     document.getElementById("tempo-jogo").style.display="block";
-    document.getElementById("quartinho").style.display = "block";
+    document.getElementById("quartinho").style.display = "flex";
     document.getElementById("dentroCasa").style.display = "none";
     document.getElementById("town").style.display = "none";
     document.getElementById("telaP").style.display = "none";

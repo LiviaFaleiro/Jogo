@@ -13,12 +13,13 @@ function voltar(){
 }
 
 function voltarCasa(){
-   
+    document.body.style.backgroundImage = "url(/assets/cenario/casa.jpg)" 
     document.getElementById("tempo-jogo").style.display="block";
     document.getElementById("dentroCasa").style.display = "flex";
     document.getElementById("quartinho").style.display = "none";
     document.getElementById("Banheiroo").style.display = "none";
-
+    document.getElementById("cozinha").style.display = "none"
+    document.getElementById("Sacola-Abrir").style.display = "none"
 }
 
 function voltarMenuFesta(){
