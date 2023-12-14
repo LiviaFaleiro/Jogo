@@ -127,7 +127,7 @@ function telap(personagem) {
                 vida()
                 capitalismo()
                 
-                if(personagemSelecionado.energia <=0 || personagemSelecionado.felicidade <=0 || personagemSelecionado.vida <=0 || personagemSelecionado.energia>=100){
+                if(personagemSelecionado.energia <=0 || personagemSelecionado.felicidade <=0 || personagemSelecionado.vida <=0 || personagemSelecionado.fome>100){
 
                           document.location = "https://www.orkut.com/index_pt.html"
                            alert("Você morreu igual o Orkut")
@@ -135,3 +135,10 @@ function telap(personagem) {
                 }
         }
     
+        if(personagemSelecionado.energia>=100 ){
+
+
+            document.location = "https://www.orkut.com/index_pt.html"
+            alert("Você ficou com tanta energia acumulada que teve um ataque cardíaco e morreu (Igual o Orkut)")
+
+        }

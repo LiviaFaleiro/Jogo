@@ -52,7 +52,7 @@ function dancar(){
         if(personagemSelecionado == cozinheira){
 
             alert("Você adora festas!")
-            personagemSelecionado.felicidade-=10
+            personagemSelecionado.felicidade+=10
             personagemSelecionado.fome+=6
             personagemSelecionado.energia+=6
             personagemSelecionado.vida+=6
@@ -60,7 +60,7 @@ function dancar(){
         if(personagemSelecionado == paleontologa){
 
             alert("Você AMA festas")
-            personagemSelecionado.felicidade-=15
+            personagemSelecionado.felicidad+=15
             personagemSelecionado.fome+=10
             personagemSelecionado.energia+=7
             personagemSelecionado.vida+=6
@@ -243,7 +243,7 @@ if(personagemSelecionado){
     else if(personagemSelecionado == paleontologa){
 
             alert("Um banho sempre é bom.")
-            personagemSelecionado.felicidade+=0
+            personagemSelecionado.felicidade+=4
 
     }
     else if(personagemSelecionado == cozinheira){

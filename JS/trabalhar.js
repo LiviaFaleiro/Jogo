@@ -84,17 +84,21 @@ personagemSelecionado.felicidade-=4
 
 }
 
-if(personagemSelecionado.fome>=30){
+if(personagemSelecionado){
 
-        alert("Você está ficando com fome!! vá comer")
-}
-if(personagemSelecionado.energia<=20){
+     if(personagemSelecionado.fome>=30){
 
-       alert("Vá dormir, estás cansado(a). Se cuide senão vai morrer")
-}
-
-if(personagemSelecionado.dinheiro<=0){
-
-      alert("O capitalismo sugou tudo que você tinha, trabalhe mais...para conseguir um pouco de dinheiro")
+          alert("Você está ficando com fome!! vá comer")
+  }
+  if(personagemSelecionado.energia<=20){
+  
+         alert("Vá dormir, estás cansado(a). Se cuide senão vai morrer")
+  }
+  
+  if(personagemSelecionado.dinheiro<=0){
+  
+        alert("O capitalismo sugou tudo que você tinha, trabalhe mais...para conseguir um pouco de dinheiro")
+  
+  }
 
 }
