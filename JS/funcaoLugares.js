@@ -52,7 +52,7 @@ function dancar(){
         if(personagemSelecionado == cozinheira){
 
             alert("Você adora festas!")
-            personagemSelecionado.felicidade-=10
+            personagemSelecionado.felicidade+=10
             personagemSelecionado.fome+=6
             personagemSelecionado.energia+=6
             personagemSelecionado.vida+=6
@@ -60,7 +60,7 @@ function dancar(){
         if(personagemSelecionado == paleontologa){
 
             alert("Você AMA festas")
-            personagemSelecionado.felicidade-=15
+            personagemSelecionado.felicidad+=15
             personagemSelecionado.fome+=10
             personagemSelecionado.energia+=7
             personagemSelecionado.vida+=6
@@ -74,6 +74,7 @@ atualizarPerfil(personagemSelecionado)
     function beber(){
 
            document.getElementById("bebidas").style.display="flex"
+           document.body.style.backgroundImage = "url(/assets/cenario/bar.jpg)"
            document.getElementById("festar").style.display = "none";
 
       
@@ -185,6 +186,7 @@ function casa(){
 
 function quarto(){
 
+    document.body.style.backgroundImage = "url(/assets/cenario/quarto.jpg)"
     document.getElementById("tempo-jogo").style.display="block";
     document.getElementById("quartinho").style.display = "flex";
     document.getElementById("dentroCasa").style.display = "none";
@@ -215,6 +217,7 @@ atualizarPerfil(personagemSelecionado)
 
 function banheiro(){
 
+    document.body.style.backgroundImage = "url(/assets/cenario/banheiroo.jpeg)"
     document.getElementById("tempo-jogo").style.display="block";
     document.getElementById("Banheiroo").style.display = "flex";
     document.getElementById("dentroCasa").style.display = "none";
@@ -243,7 +246,7 @@ if(personagemSelecionado){
     else if(personagemSelecionado == paleontologa){
 
             alert("Um banho sempre é bom.")
-            personagemSelecionado.felicidade+=0
+            personagemSelecionado.felicidade+=4
 
     }
     else if(personagemSelecionado == cozinheira){
@@ -286,5 +289,13 @@ function rosto(){
 
         }
        }
+atualizarPerfil(personagemSelecionado)
+}
+if(personagemSelecionado){
+
+    if(personagemSelecionado.fome <0){
+
+        personagemSelecionado.fome=0
+    }
 atualizarPerfil(personagemSelecionado)
 }

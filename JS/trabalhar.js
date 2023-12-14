@@ -10,9 +10,10 @@ if(personagemSelecionado){
        if (personagemSelecionado == programadora){
 
             //laboratório de informática
-        
+
             document.getElementById("col2").style.display = "block"
             document.getElementById("trabP").style.display = "block"
+            document.body.style.backgroundImage = "url(/assets/cenario/informatica.png)"
 
             
         }
@@ -20,6 +21,7 @@ if(personagemSelecionado){
 
           document.getElementById("col3").style.display = "block"          
           document.getElementById("trabA").style.display = "block"
+          document.body.style.backgroundImage = "url(/assets/cenario/teatro.jpg)"
 
         }
         else if(personagemSelecionado == cozinheira){
@@ -27,12 +29,14 @@ if(personagemSelecionado){
              //cozinha
              document.getElementById("trabC").style.display = "block"
              document.getElementById("col4").style.display = "block"
+             document.body.style.backgroundImage = "url(/assets/cenario/restaurante.jpg)"
      
         }
         else if(personagemSelecionado == paleontologa){
              //labBiologia
              document.getElementById("trabPa").style.display = "block"
              document.getElementById("col1").style.display = "block"
+             document.body.style.backgroundImage = "url(/assets/cenario/ciencias.jpg)"
         }
 
 }
@@ -83,17 +87,21 @@ personagemSelecionado.felicidade-=4
 
 }
 
-if(personagemSelecionado.fome>=30){
+if(personagemSelecionado){
 
-        alert("Você está ficando com fome!! vá comer")
-}
-if(personagemSelecionado.energia<=20){
+     if(personagemSelecionado.fome>=30){
 
-       alert("Vá dormir, estás cansado(a). Se cuide senão vai morrer")
-}
-
-if(personagemSelecionado.dinheiro<=0){
-
-      alert("O capitalismo sugou tudo que você tinha, trabalhe mais...para conseguir um pouco de dinheiro")
+          alert("Você está ficando com fome!! vá comer")
+  }
+  if(personagemSelecionado.energia<=20){
+  
+         alert("Vá dormir, estás cansado(a). Se cuide senão vai morrer")
+  }
+  
+  if(personagemSelecionado.dinheiro<=0){
+  
+        alert("O capitalismo sugou tudo que você tinha, trabalhe mais...para conseguir um pouco de dinheiro")
+  
+  }
 
 }
