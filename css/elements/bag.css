@@ -1,4 +1,4 @@
-.main-sacola {
+.main-animation {
     position: relative;
     left: 88%;
     top: 20px;
@@ -6,17 +6,18 @@
     width: fit-content;
 }
 
-.main-sacola .main-button {
+.main-animation .main-button {
+    display: flex;
     overflow: hidden;
     align-items: center;
 }
 
-.main-sacola .main-button span {
+.main-animation .main-button span {
     margin-left: 65px;
     transition: all 0.3s;
 }
 
-.main-sacola .main-button span img {
+.main-animation .main-button span img {
     position: relative;
     width: 25px;
     top: 50px;
@@ -27,6 +28,29 @@
     -webkit-transform: translateY(-47px);
     transition: all 0.3s;
 }
+
+.main-animation .main-button.-home {
+    flex-wrap: wrap;
+}
+
+.main-animation.-home {
+    position: absolute;
+    top: 80%;
+    left: 45%;
+}
+
+.main-animation .main-button.-home span {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.main-animation .main-button.-home span img {
+    transform: rotate(-90deg);
+    top: 15px;
+    left: 60px;
+}
+
+
 
 .sacola-description {
     position: absolute;
